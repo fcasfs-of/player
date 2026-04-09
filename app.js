@@ -71,8 +71,11 @@ if(run_file().fl_priv==true){  playernoprib=0;  }
 
 mainVideo.innerHTML='<div style="overflow:auto; width:100%;height:100%;text-align:center;color:#fff;background:#000;"><br/><img style="display:block;  pointer-events:none;  width:64px;  text-align:center;margin:0 auto;" src="https://fcasfs-of.cloud-fs.net/player/fl_lock.png"/><br/><p>It is not possible to access the File because it is Private.</p><br/><br/><br/><br/></div>';
 
+var fs_Playerjs_str=0;
+if(getfvald_ddfffle=="1"){   fs_Playerjs_str=1;  }
+    
 if(playernoprib==1){
-fplayeri = fs_Playerjs({ OSD:run_file().player_osd, id:"main-video", customtext:{age:""}, config:run_file().config, nocontrols:0, autoplay:0, loop:0, title:""+video.title, file:""+video.file, poster:""+video.thumb, player:1,"url":`https://player.fcasfs-of.cloud-fs.net/${run_file().player_lang}?fileID=${getfval_tyget}&fileView=true&pos=0&fileSelect=${video.videoId}`  });
+fplayeri = fs_Playerjs({ OSD:run_file().player_osd, id:"main-video", customtext:{age:""}, config:run_file().config, nocontrols:0, autoplay:fs_Playerjs_str, loop:0, title:""+video.title, file:""+video.file, poster:""+video.thumb, player:1,"url":`https://player.fcasfs-of.cloud-fs.net/${run_file().player_lang}?fileID=${getfval_tyget}&fileView=true&pos=0&fileSelect=${video.videoId}`  });
 fplayeri.Toast("info",video.filetl,video.title);
 onstart_fplay(fplayeri,getfvald_tygetslpose);  
 }
