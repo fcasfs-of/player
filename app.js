@@ -72,6 +72,8 @@ mainVideo.innerHTML='<div style="overflow:auto; width:100%;height:100%;text-alig
 if(playernoprib==1){
 mainVideo.innerHTML='';
 
+if(typeof fplayeri.api=='function'){    fplayeri.api("destroy");  }
+
 fplayeri = fs_Playerjs({ OSD:run_file().player_osd, id:"main-video", customtext:{age:""}, config:run_file().config, nocontrols:0, autoplay:0, loop:0, title:""+video.title, file:""+video.file, poster:""+video.thumb, player:1,"url":`https://player.fcasfs-of.cloud-fs.net/${run_file().player_lang}?fileID=${getfval_tyget}&fileView=true&pos=0&fileSelect=${video.videoId}`  });
 fplayeri.Toast("info",video.filetl,video.title);
 onstart_fplay(fplayeri, getfvald_tygetslpose, getfvald_ddfffle);  
