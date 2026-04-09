@@ -1,3 +1,24 @@
+function loaded_itenf(mdpl_fielsd){  
+  if(mdpl_fielsd){
+    for (var i = 0; i < mdpl_fielsd.length; i++) {
+idarquivo=mdpl_fielsd[i];
+ 
+var scriptfd = document.createElement("script");
+    scriptfd.setAttribute("id", "fileplffayer_fd");
+    scriptfd.setAttribute("onload", "   run_file=\"\";    ");
+    scriptfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/file/"+idarquivo+".js");
+document.getElementsByTagName("head")[0].appendChild(scriptfd);
+
+var infilefaz = document.getElementById("fileplffayer_fd");     if(infilefaz){   infilefaz.remove();   }   
+     
+    }
+  }   
+     var infiddlefdaz = document.getElementById("fileplffggayer_fd");     if(infiddlefdaz){   infiddlefdaz.remove();   }   
+
+}
+
+
+
 function getUrlParameter(sParam) {  var dgetUrlParameterd="";
     var sPageURL = decodeURIComponent(location.href);//window.location.search.substring(1));
    if(sPageURL.split('?')){
