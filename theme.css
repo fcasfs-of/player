@@ -24,7 +24,7 @@ img {  pointer-events:none;   }
   inset:-30px;
   border-radius: 50%;
   border:30px solid #2D77FF;
-  animation: p8 2s infinite linear;
+  animation: p8 1s infinite linear;
 }
 
 @keyframes p8 {
