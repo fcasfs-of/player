@@ -82,7 +82,7 @@ mainVideo.innerHTML='<div style="text-transform: uppercase;  overflow:auto; widt
 if(playernoprib==1){
 mainVideo.innerHTML='';
 
-if(fplayeri){  fplayeri.api("destroy");  }
+//if(fplayeri){  fplayeri.api("destroy");  }
 
 fplayeri = fs_Playerjs({ OSD:run_file().player_osd, id:"main-video", customtext:{age:""}, config:run_file().config, nocontrols:0, autoplay:0, loop:0, title:""+video.title, file:""+video.file, poster:""+video.thumb, player:1,"url":`https://player.fcasfs-of.cloud-fs.net/${run_file().player_lang}?fileID=${getfval_tyget}&fileView=true&pos=${getfvald_tygetslpose}&fileSelect=${video.id}`  });
 if(fplayeri){
