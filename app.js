@@ -4,7 +4,7 @@ var fplayeri;
 function stringno_valtext(id,g) {   if (id == null || id === "" || id === "undefined") {     return g;    }    return id;   }
 
 
-function onstart_fplay(fplayeri, time, starr, txtingo){ 
+function onstart_fplay(fplayeri, time, starr, tid){ 
 
 fplayeri.OnEvents("exitfullscreen",function(){      fplayeri.OSD({ duration:3e3, position:"absolute", text: 'Exiting FullScreen', pos: "top-center", showAction: false,  actionText: "", width: 'auto'   });  }); 
 fplayeri.OnEvents("fullscreen",function(){      fplayeri.OSD({ duration:3e3, position:"absolute", text: 'FullScreen', pos: "top-center", showAction: false,  actionText: "", width: 'auto'    });      });
@@ -19,9 +19,14 @@ fplayeri.OnEvents("play",function(){     fplayeri.OSD({ duration:3e3, text: 'Rep
 fplayeri.api("unmute"); 
 
 
-fplayeri.OnEvents("metadata",function(){
+fplayeri.OnEvents("start",function(){
 
-if(txtingo){    txtingo.innerHTML=""+convertSecondsDurationto(Number(stringno_valtext(fplayeri.api("duration"),"0")));   }
+if(tid){   const mainVideotime = document.getElementById('vidlist_'+tid);  if(mainVideotime){  mainVideotime.innerHTML=""+convertSecondsDurationto(Number(stringno_valtext(fplayeri.api("duration"),"0")));   }  }
+
+});
+
+
+fplayeri.OnEvents("metadata",function(){
 
 });
 
@@ -65,7 +70,7 @@ var playlistData = [];
 
 
 function changeVideo(playlistData,videoId) {
-const mainVideotime = document.getElementById('vidlist_'+videoId);
+
     const video = playlistData.find(v => v.id === videoId);
             if (!video) return;
             
@@ -81,7 +86,7 @@ mainVideo.innerHTML='';
 
 fplayeri = fs_Playerjs({ OSD:run_file().player_osd, id:"main-video", customtext:{age:""}, config:run_file().config, nocontrols:0, autoplay:0, loop:0, title:""+video.title, file:""+video.file, poster:""+video.thumb, player:1,"url":`https://player.fcasfs-of.cloud-fs.net/${run_file().player_lang}?fileID=${getfval_tyget}&fileView=true&pos=0&fileSelect=${video.videoId}`  });
 fplayeri.Toast("info",video.filetl,video.title);
-onstart_fplay(fplayeri, getfvald_tygetslpose, getfvald_ddfffle,mainVideotime);  
+onstart_fplay(fplayeri, getfvald_tygetslpose, getfvald_ddfffle,video.id);  
 }
             
             videoTitle.innerHTML = video.title;
