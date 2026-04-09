@@ -18,10 +18,15 @@ fplayeri.OnEvents("play",function(){     fplayeri.OSD({ duration:3e3, text: 'Rep
 
 fplayeri.api("unmute"); 
 
-fplayeri.OnEvents("init",function(){
+
+fplayeri.OnEvents("start",function(){
 
 if(txtingo){    txtingo.innerHTML=""+convertSecondsDurationto(Number(stringno_valtext(fplayeri.api("duration"),"0")));   }
 
+});
+
+
+fplayeri.OnEvents("init",function(){
 
 //fplayeri.api("unmute");
 
