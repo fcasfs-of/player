@@ -1,7 +1,7 @@
 var fplayeri;
 
 
-function stringno_valtext(id,g) {   var dfyyggdfgetLastdRofw=id;   if(id=="undefined"){     dfyyggdfgetLastdRofw=g;    }       if(id==undefined){     dfyyggdfgetLastdRofw=g;    }    return dfyyggdfgetLastdRofw;    }
+function stringno_valtext(id,g) {   if (id == null || id === "" || id === "undefined") {        return g;    }    return id;  }
 
 
 function onstart_fplay(fplayeri, time, starr){ 
@@ -46,7 +46,6 @@ fplayeri.OnEvents("speed",function(){       fplayeri.OSD({ duration:3e3, text: '
 
 function onstart_file(run_file){     
 var playlistData = [];
-
            
   var acssr = document.getElementById('cutompll');   
           var acssr_cover = document.querySelector('.logo img');
@@ -63,7 +62,7 @@ function changeVideo(playlistData,videoId) {
             const video = playlistData.find(v => v.id === videoId);
             if (!video) return;
             
-            //mainVideo.src = `https://player.fcasfs-of.cloud-fs.net/${run_file().player_lang}?fileID=${getfval_tyget}&fileView=true&pos=0&fileSelect=${video.videoId}`;
+//mainVideo.src = `https://player.fcasfs-of.cloud-fs.net/${run_file().player_lang}?fileID=${getfval_tyget}&fileView=true&pos=0&fileSelect=${video.videoId}`;
 
 var playernoprib=1;
 if(run_file().fl_priv==true){  playernoprib=0;  }
@@ -163,7 +162,7 @@ function loadPlaylist(playlistData) {
                 category: "",
                 thumb: run_file().list[j].poster,
                 active: checjfdk
-            });
+});
    }
 
             loadPlaylist(playlistData);
