@@ -24,7 +24,7 @@ fplayeri.OnEvents("start",function(){
 
 fplayeri.OnEvents("metadata",function(){
 
-if(tid){   const mainVideotime = document.getElementById('vidlist_'+tid);  if(mainVideotime){  if(mainVideotime.innerHTML!=""){  mainVideotime.innerHTML=""+convertSecondsDurationto(Number(stringno_valtext(fplayeri.api("duration"),"0")));   }  }  }
+if(tid){   const mainVideotime = document.getElementById('vidlist_'+tid);  if(mainVideotime){  if(mainVideotime.innerHTML==""){  mainVideotime.innerHTML=""+convertSecondsDurationto(Number(stringno_valtext(fplayeri.api("duration"),"0")));   }  }  }
 
 });
 
@@ -85,8 +85,9 @@ mainVideo.innerHTML='';
 if(fplayeri){  fplayeri.api("destroy");  }
 
 fplayeri = fs_Playerjs({ OSD:run_file().player_osd, id:"main-video", customtext:{age:""}, config:run_file().config, nocontrols:0, autoplay:0, loop:0, title:""+video.title, file:""+video.file, poster:""+video.thumb, player:1,"url":`https://player.fcasfs-of.cloud-fs.net/${run_file().player_lang}?fileID=${getfval_tyget}&fileView=true&pos=0&fileSelect=${video.videoId}`  });
+if(fplayeri){
 fplayeri.Toast("info",video.filetl,video.title);
-onstart_fplay(fplayeri, getfvald_tygetslpose, getfvald_ddfffle,video.id);  
+onstart_fplay(fplayeri, getfvald_tygetslpose, getfvald_ddfffle,video.id);  }
 }
             
             videoTitle.innerHTML = video.title;
