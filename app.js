@@ -60,7 +60,7 @@ var playlistData = [];
 
 
 function changeVideo(playlistData,videoId) {
-const mainVideotime = document.getElementById('vidlist_'+videoId));
+const mainVideotime = document.getElementById('vidlist_'+videoId);
     const video = playlistData.find(v => v.id === videoId);
             if (!video) return;
             
