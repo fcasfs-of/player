@@ -139,9 +139,7 @@ function loadPlaylist(playlistData) {
     var linkfroplauemd="https://fcasfs-of.cloud-fs.net/player/?fileID="+getfval_tyget+"";   
     var linkfrarromd="https://player.fcasfs-of.cloud-fs.net/"+run_file().player_lang+"?fileID="+getfval_tyget+"&fileView=true";  
     var linkfromd="https://player.fcasfs-of.cloud-fs.net/"+run_file().player_lang+"?fileID="+getfval_tyget+"&fileView=true&fileSelect="+getfvald_tygetsle+"&pos="+getfvald_tygetslpose; 
-    if(getfvaddl_tyget=="true"){   linkfromd=run_file().cover;  
-    //ammpdr.innerHTML="";  
- }  
+    if(getfvaddl_tyget=="true"){   linkfromd=run_file().cover;   }  
     
   var checjfdk=false;   var checjfdksd=parseInt(getfvald_tygetsle)-1;
    if(checjfdksd>run_file().list.length){  checjfdksd=0;  }
