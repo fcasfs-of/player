@@ -139,6 +139,9 @@ function loadPlaylist(playlistData) {
 }
             
 
+if (!run_file){
+mainVideo.innerHTML='<div style="overflow:auto; width:100%;height:100%;text-align:center;color:#fff;background:#000;"><br/> <br/><p>This File ID does not exist.</p><br/><br/><br/><br/></div>';   }
+
             
   if(typeof run_file=='function'){  
     var sryrkk="<style>  .markdown-body blockquote #mpd, #mpd { color:#000;  }   body img{ pointer-events:none; } </style>";  
