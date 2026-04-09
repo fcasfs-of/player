@@ -25,7 +25,12 @@ if (getfval_tyget!="") {
 
 var getfvadinf_listyget=getUrlParameter("info");
 
-
+var getfvald_ddfffle="0";
+var getfvaddld_tyget=getUrlParameter("fileView");
+if (getfvaddld_tyget=="on") {
+getfvald_ddfffle="1";
+}
+	
 var getfvald_tygetsle="1";
 var getfvald_tygetslpose="0";
 var getfvald_tyget=getUrlParameter("select");
