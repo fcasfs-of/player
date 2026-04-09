@@ -28,9 +28,6 @@ if(txtingo){    txtingo.innerHTML=""+convertSecondsDurationto(Number(stringno_va
 
 fplayeri.OnEvents("init",function(){
 
-if(txtingo){    txtingo.innerHTML=""+convertSecondsDurationto(Number(stringno_valtext(fplayeri.api("duration"),"0")));   }
-
-
 //fplayeri.api("unmute");
 
 fplayeri.api('seek',Number(stringno_valtext(time,"0")));
