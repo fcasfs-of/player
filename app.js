@@ -8,14 +8,15 @@ function stringno_valtext(id,g) {   var dfyyggdfgetLastdRofw=id;   if(id=="undef
 
 function onstart_fplay(fplayeri, time){ 
 
-fplayeri.OnEvents("exitfullscreen",function(){      fs_OSD({ duration:3e3, position:"absolute", text: 'Exiting FullScreen', pos: "top-center", showAction: false,  actionText: "", width: 'auto'   });  }); fplayeri.OnEvents("fullscreen",function(){      fs_OSD({ duration:3e3, position:"absolute", text: 'FullScreen', pos: "top-center", showAction: false,  actionText: "", width: 'auto'    });      });
+fplayeri.OnEvents("exitfullscreen",function(){      fplayeri.OSD({ duration:3e3, position:"absolute", text: 'Exiting FullScreen', pos: "top-center", showAction: false,  actionText: "", width: 'auto'   });  }); 
+fplayeri.OnEvents("fullscreen",function(){      fplayeri.OSD({ duration:3e3, position:"absolute", text: 'FullScreen', pos: "top-center", showAction: false,  actionText: "", width: 'auto'    });      });
 
-    fplayeri.OnEvents("unmute",function(){      fs_OSD({ duration:3e3, text: 'Active Sound', position:"absolute", pos: "top-center", showAction: false,  actionText: "", width: 'auto'    });      });
-    fplayeri.OnEvents("mute",function(){     fs_OSD({ duration:3e3, text: 'Muted', position:"absolute", pos: "top-center", showAction: false,  actionText: "", width: 'auto'    });      });
+fplayeri.OnEvents("unmute",function(){      fplayeri.OSD({ duration:3e3, text: 'Active Sound', position:"absolute", pos: "top-center", showAction: false,  actionText: "", width: 'auto'    });      });
+fplayeri.OnEvents("mute",function(){     fplayeri.OSD({ duration:3e3, text: 'Muted', position:"absolute", pos: "top-center", showAction: false,  actionText: "", width: 'auto'    });      });
 
-fplayeri.OnEvents("pause",function(){     fs_OSD({ duration:3e3, text: 'Paused', position:"absolute", pos: "top-center", showAction: false,  actionText: "", width: '120'    });      });
-fplayeri.OnEvents("stop",function(){     fs_OSD({ duration:3e3, text: 'Stopped', position:"absolute", pos: "top-center", showAction: false,  actionText: "", width: '120'    });      });
-fplayeri.OnEvents("play",function(){     fs_OSD({ duration:3e3, text: 'Reproducing', position:"absolute", pos: "top-center", showAction: false,  actionText: "", width: '180'    });      });
+fplayeri.OnEvents("pause",function(){     fplayeri.OSD({ duration:3e3, text: 'Paused', position:"absolute", pos: "top-center", showAction: false,  actionText: "", width: '120'    });      });
+fplayeri.OnEvents("stop",function(){     fplayeri.OSD({ duration:3e3, text: 'Stopped', position:"absolute", pos: "top-center", showAction: false,  actionText: "", width: '120'    });      });
+fplayeri.OnEvents("play",function(){     fplayeri.OSD({ duration:3e3, text: 'Reproducing', position:"absolute", pos: "top-center", showAction: false,  actionText: "", width: '180'    });      });
 
 
 if(getfvald_ddfffle=="1"){   fplayeri.api("play");  }
@@ -26,19 +27,17 @@ fplayeri.api("unmute");
 
 fplayeri.api('seek',Number(stringno_valtext(time,"0")));
 
+fplayeri.OnEvents("end",function(){      fplayeri.OSD({ duration:3e3, position:"absolute", text: 'Finishing', pos: osdposito, showAction: false,  actionText: "", width: '180px'    });      });
 
-fplayeri.OnEvents("end",function(){      fs_OSD({ duration:3e3, position:"absolute", text: 'Finishing', pos: osdposito, showAction: false,  actionText: "", width: '180px'    });      });
- 
-
-fplayeri.OnEvents("volume",function(){     fs_OSD({ duration:3e3, position:"absolute", text: 'Volume: '+Math.floor(fplayeri.api("volume")*100)+"%", pos: "top-center", showAction: false,  actionText: "", width: 'auto'    });      });
+fplayeri.OnEvents("volume",function(){     fplayeri.OSD({ duration:3e3, position:"absolute", text: 'Volume: '+Math.floor(fplayeri.api("volume")*100)+"%", pos: "top-center", showAction: false,  actionText: "", width: 'auto'    });      });
   
-fplayeri.OnEvents("finish",function(){       fs_OSD({ duration:3e3, position:"absolute", text: 'Finished', pos: "top-center", showAction: false,  actionText: "", width: '180px'    });      });
+fplayeri.OnEvents("finish",function(){       fplayeri.OSD({ duration:3e3, position:"absolute", text: 'Finished', pos: "top-center", showAction: false,  actionText: "", width: '180px'    });      });
 
-fplayeri.OnEvents("seek",function(){      fs_OSD({ duration:3e3, position:"absolute", text: ''+convertSecondsDurationto(fplayeri.api("time")), pos: "top-center", showAction: false,  actionText: "", width: '180px'   });      });
+fplayeri.OnEvents("seek",function(){      fplayeri.OSD({ duration:3e3, position:"absolute", text: ''+convertSecondsDurationto(fplayeri.api("time")), pos: "top-center", showAction: false,  actionText: "", width: '180px'   });      });
 
-fplayeri.OnEvents("userseek",function(){      fs_OSD({ duration:3e3, position:"absolute", text: ''+convertSecondsDurationto(fplayeri.api("time")), pos: "top-center", showAction: false,  actionText: "", width: '180px'   });      });
+fplayeri.OnEvents("userseek",function(){      fplayeri.OSD({ duration:3e3, position:"absolute", text: ''+convertSecondsDurationto(fplayeri.api("time")), pos: "top-center", showAction: false,  actionText: "", width: '180px'   });      });
 
-fplayeri.OnEvents("speed",function(){       fs_OSD({ duration:3e3, text: 'Speed: '+fplayeri.api("speed"), position:"absolute", pos: "top-center", showAction: false,  actionText: "", width: 'auto'     });       });
+fplayeri.OnEvents("speed",function(){       fplayeri.OSD({ duration:3e3, text: 'Speed: '+fplayeri.api("speed"), position:"absolute", pos: "top-center", showAction: false,  actionText: "", width: 'auto'     });       });
 
 });
 
