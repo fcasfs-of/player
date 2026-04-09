@@ -6,7 +6,7 @@ function showPage() {
   document.getElementById("loader").style.display = "none";
   document.getElementById("myDiv").style.display = "block";
 }
-  document.getElementsByTagName("body")[0].onload=function(){  myFunc();   };
+  //document.getElementsByTagName("body")[0].onload=function(){  myFunc();   };
 
 
 
