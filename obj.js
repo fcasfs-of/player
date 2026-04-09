@@ -1,3 +1,14 @@
+var myVar;
+
+function myFunc() {  myVar = setTimeout(showPage, 600);   }
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+
+
+
 function loaded_itenf(mdpl_fielsd){  
   if(mdpl_fielsd){
     for (var i = 0; i < mdpl_fielsd.length; i++) {
