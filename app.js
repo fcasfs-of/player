@@ -4,7 +4,7 @@ var fplayeri;
 function stringno_valtext(id,g) {   if (id == null || id === "" || id === "undefined") {     return g;    }    return id;   }
 
 
-function onstart_fplay(fplayeri, time, starr){ 
+function onstart_fplay(fplayeri, time, starr, txtingo){ 
 
 fplayeri.OnEvents("exitfullscreen",function(){      fplayeri.OSD({ duration:3e3, position:"absolute", text: 'Exiting FullScreen', pos: "top-center", showAction: false,  actionText: "", width: 'auto'   });  }); 
 fplayeri.OnEvents("fullscreen",function(){      fplayeri.OSD({ duration:3e3, position:"absolute", text: 'FullScreen', pos: "top-center", showAction: false,  actionText: "", width: 'auto'    });      });
@@ -19,6 +19,9 @@ fplayeri.OnEvents("play",function(){     fplayeri.OSD({ duration:3e3, text: 'Rep
 fplayeri.api("unmute"); 
 
 fplayeri.OnEvents("init",function(){
+
+if(txtingo){    txtingo.innerHTML=""+convertSecondsDurationto(Number(stringno_valtext(fplayeri.api("duration"),"0")));   }
+
 
 //fplayeri.api("unmute");
 
@@ -57,7 +60,8 @@ var playlistData = [];
 
 
 function changeVideo(playlistData,videoId) {
-            const video = playlistData.find(v => v.id === videoId);
+const mainVideotime = document.getElementById('vidlist_'+videoId));
+    const video = playlistData.find(v => v.id === videoId);
             if (!video) return;
             
 //mainVideo.src = `https://player.fcasfs-of.cloud-fs.net/${run_file().player_lang}?fileID=${getfval_tyget}&fileView=true&pos=0&fileSelect=${video.videoId}`;
@@ -72,7 +76,7 @@ mainVideo.innerHTML='';
 
 fplayeri = fs_Playerjs({ OSD:run_file().player_osd, id:"main-video", customtext:{age:""}, config:run_file().config, nocontrols:0, autoplay:0, loop:0, title:""+video.title, file:""+video.file, poster:""+video.thumb, player:1,"url":`https://player.fcasfs-of.cloud-fs.net/${run_file().player_lang}?fileID=${getfval_tyget}&fileView=true&pos=0&fileSelect=${video.videoId}`  });
 fplayeri.Toast("info",video.filetl,video.title);
-onstart_fplay(fplayeri, getfvald_tygetslpose, getfvald_ddfffle);  
+onstart_fplay(fplayeri, getfvald_tygetslpose, getfvald_ddfffle,mainVideotime);  
 }
             
             videoTitle.innerHTML = video.title;
@@ -108,7 +112,7 @@ function loadPlaylist(playlistData) {
                     </div>
                     <div class="playlist-item-info">
                         <h3 class="playlist-item-title">${video.title}</h3>
-                        <p class="playlist-item-duration"></p>
+                        <p class="playlist-item-duration" id="vidlist_${video.id}"></p>
                     </div>
                 `;
                 
