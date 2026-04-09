@@ -1,7 +1,7 @@
 var fplayeri;
 
 
-function stringno_valtext(id,g) {   if (id == null || id === "" || id === "undefined") {        return g;    }    return id;  }
+function stringno_valtext(id,g) {   if (id == null || id === "" || id === "undefined") {     return g;    }    return id;   }
 
 
 function onstart_fplay(fplayeri, time, starr){ 
@@ -48,7 +48,7 @@ function onstart_file(run_file){
 var playlistData = [];
            
   var acssr = document.getElementById('cutompll');   
-          var acssr_cover = document.querySelector('.logo img');
+  var acssr_cover = document.querySelector('.logo img');
         const mainVideo = document.getElementById('main-video');
         const mainVtha = document.getElementById('infotime');
         const videoTitle = document.getElementById('video-title');
@@ -147,36 +147,18 @@ function loadPlaylist(playlistData) {
              
    for(var j=0; j<run_file().list.length; j++){
     checjfdk=false;  if(j==checjfdksd){   checjfdk=true;  }
- playlistData.push({
-                id:j+1,
-                filetl: run_file().file_title,
-                title: run_file().list[j].title,
-                file: run_file().list[j].file,
-                description: run_file().file_desc,
-                videoId: j+1,
-                duration: "",
-                views: "",
-                date: "",
-                category: "",
-                thumb: run_file().list[j].poster,
-                active: checjfdk
-});
+ playlistData.push({ id:j+1, filetl: run_file().file_title, title: run_file().list[j].title, file: run_file().list[j].file, description: run_file().file_desc, videoId: j+1, duration: "", views: "", date: "", category: "", thumb: run_file().list[j].poster, active: checjfdk  });
    }
 
-            loadPlaylist(playlistData);
-            const currentVideo = playlistData.find(v => v.active);
-            if (currentVideo) {
-                document.querySelector('.video-meta').innerHTML = ``;
-            }  
+      loadPlaylist(playlistData);
+      const currentVideo = playlistData.find(v => v.active);
+       if (currentVideo) {  document.querySelector('.video-meta').innerHTML = ``;    }  
               
     //ampmpl.innerHTML='<iframe allowfullscreen width="100%" height="350" allow="Access-Control-Allow-Origin *; accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *" sandbox="allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-storage-access-by-user-activation" frameborder="0" scrolling="no" src="'+linkfromd+'" style="border: 1px solid black"></iframe>';  
     //amptar.innerHTML="<a href='"+linkfrarromd+"'>"+run_file().file_title+"</a>"; 
     }  
-    if(getfvaddl_tyget=="true"){  
-      //ampmpl.innerHTML='<div style="margin:0 auto;text-align:center;"><img style="text-align:center;margin:0 auto;" width="350px" src="'+linkfromd+'"/></div>';  
-    }  
+    if(getfvaddl_tyget=="true"){      }  
     if(getfvaddl_listyget=="true"){  
-      //ampmpl.innerHTML="";  
       //ammpdr.innerHTML=""+listaFiles(run_file().list, linkfrarromd);  
     } 
     if(getfvadinf_listyget=="true"){   
