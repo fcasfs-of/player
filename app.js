@@ -16,24 +16,22 @@ fplayeri.OnEvents("pause",function(){     fplayeri.OSD({ duration:3e3, text: 'Pa
 fplayeri.OnEvents("stop",function(){     fplayeri.OSD({ duration:3e3, text: 'Stopped', position:"absolute", pos: "top-center", showAction: false,  actionText: "", width: '120'    });      });
 fplayeri.OnEvents("play",function(){     fplayeri.OSD({ duration:3e3, text: 'Reproducing', position:"absolute", pos: "top-center", showAction: false,  actionText: "", width: '180'    });      });
 
-fplayeri.api("unmute"); 
-
 
 fplayeri.OnEvents("start",function(){
-
-if(tid){   const mainVideotime = document.getElementById('vidlist_'+tid);  if(mainVideotime){  mainVideotime.innerHTML=""+convertSecondsDurationto(Number(stringno_valtext(fplayeri.api("duration"),"0")));   }  }
 
 });
 
 
 fplayeri.OnEvents("metadata",function(){
 
+if(tid){   const mainVideotime = document.getElementById('vidlist_'+tid);  if(mainVideotime){  if(mainVideotime.innerHTML!=""){  mainVideotime.innerHTML=""+convertSecondsDurationto(Number(stringno_valtext(fplayeri.api("duration"),"0")));   }  }  }
+
 });
 
 
 fplayeri.OnEvents("init",function(){
 
-//fplayeri.api("unmute");
+fplayeri.api("unmute");
 
 fplayeri.api('seek',Number(stringno_valtext(time,"0")));
 
