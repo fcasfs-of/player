@@ -18,10 +18,10 @@ fplayeri.OnEvents("stop",function(){     fs_OSD({ duration:3e3, text: 'Stopped',
 fplayeri.OnEvents("play",function(){     fs_OSD({ duration:3e3, text: 'Reproducing', position:"absolute", pos: "top-center", showAction: false,  actionText: "", width: '180'    });      });
 
 
-fplayeri.OnEvents("init",function(){
-
 if(getfvald_ddfffle=="1"){   fplayeri.api("play");  }
 
+
+fplayeri.OnEvents("init",function(){
 fplayeri.api("unmute");
 
 fplayeri.api('seek',Number(stringno_valtext(time,"0")));
