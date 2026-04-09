@@ -11,23 +11,30 @@ img {  pointer-events:none;   }
   width: 120px;
   height: 120px;
   margin: -76px 0 0 -76px;
-  border: 16px solid #f3f3f3;
+}
+
+.loader{
+  border:30px solid #E4E4ED;
   border-radius: 50%;
-  border-top: 16px solid #3498db;
-  -webkit-animation: spin 2s linear infinite;
-  animation: spin 2s linear infinite;
+  transform:rotate(45deg);
+}
+.loader::before {
+  content: "";
+  position: absolute;
+  inset:-30px;
+  border-radius: 50%;
+  border:30px solid #2D77FF;
+  animation: p8 2s infinite linear;
 }
 
-
-@-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
+@keyframes p8 {
+    0%   {clip-path:polygon(50% 50%,0 0,0    0,0    0   ,0    0   ,0    0   )}
+    25%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0   ,100% 0   ,100% 0   )}
+    50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+    75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0    100%,0    100%)}
+    100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0    100%,0    0   )}
 }
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
 
 .animate-bottom {
   position: relative;
@@ -38,13 +45,13 @@ img {  pointer-events:none;   }
 }
 
 @-webkit-keyframes animatebottom {
-  from { bottom:-100px; opacity:0 } 
-  to { bottom:0px; opacity:1 }
+  from { bottom:-100px; opacity:0; } 
+  to { bottom:0px; opacity:1; }
 }
 
 @keyframes animatebottom { 
-  from{ bottom:-100px; opacity:0 } 
-  to{ bottom:0; opacity:1 }
+  from{ bottom:-100px; opacity:0; } 
+  to{ bottom:0; opacity:1; }
 }
 
 #myDiv {  display: none;  text-align: center;   }
