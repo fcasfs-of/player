@@ -113,7 +113,7 @@ function loadPlaylist(playlistData) {
 
 function prevVideo() {
 let newIndex = currentVideoIndex - 1;
-if (newIndex < 0) {  newIndex = playlistData.length - 1;   }
+if (newIndex < 0) {  newIndex = playlistData.length;   }
  changeVideo(playlistData,newIndex);
 }
 function nextVideo() {
