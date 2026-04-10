@@ -108,12 +108,10 @@ onstart_fplay(fplayeri, getfvald_tygetslpose, getfvald_ddfffle,video.id);  }
             }
 }
 
-  
-function loadPlaylist(playlistData) {
 
 function prevVideo() {
 let newIndex = currentVideoIndex - 1;
-if (newIndex < 0) {  newIndex = playlistData.length;   }
+if (newIndex < 0) {  newIndex = playlistData.length -1;   }
  changeVideo(playlistData,newIndex);
 }
 function nextVideo() {
@@ -122,6 +120,9 @@ if (newIndex >= playlistData.length) {  newIndex = 0;    }
  changeVideo(playlistData,newIndex);
 }
 
+
+function loadPlaylist(playlistData) {
+  
             playlistContainer.innerHTML = '';
             playlistTotal.innerHTML = '';
             controlsbtns.innerHTML = '';
