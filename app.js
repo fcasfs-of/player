@@ -81,7 +81,7 @@ if (newIndex < 0) {  newIndex = playlistData.length - 1;   }
 }
 function nextVideo() {
 let newIndex = videoId + 1;
-if (newIndex >= playlistData.length) {  newIndex = 0;    }
+if (newIndex >= playlistData.length +1) {  newIndex = 0;    }
  changeVideo(playlistData, newIndex);
 }
 
