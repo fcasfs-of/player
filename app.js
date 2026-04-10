@@ -77,7 +77,7 @@ function changeVideo(playlistData,videoId) {
 var playernoprib=1;
 if(run_file().fl_priv==true){  playernoprib=0;  }
 
-mainVideo.innerHTML='<div style="position:absolute;top:0;left:0;right:0;bottom:0; text-transform: uppercase;  overflow:auto; height: 100%;width:100%; padding:5px;text-align:center;color:#fff;background:#000;"><br/><img style="pointer-events:none; text-align:center;margin:0 auto;display: block; width: 64px !important;" src="https://fcasfs-of.cloud-fs.net/player/fl_lock.png"/><br/><p>It is not possible to access the File because it is Private.</p><br/><br/><br/><br/><br/></div>';
+mainVideo.innerHTML='<div style="position:relative;top:0;left:0;right:0;bottom:0; text-transform: uppercase;  overflow:auto; height: 100%;width:100%; padding:5px;text-align:center;color:#fff;background:#000;"><br/><img style="pointer-events:none; text-align:center;margin:0 auto;display: block; width: 64px !important;" src="https://fcasfs-of.cloud-fs.net/player/fl_lock.png"/><br/><p>It is not possible to access the File because it is Private.</p><br/><br/><br/><br/><br/></div>';
     
 if(playernoprib==1){
 mainVideo.innerHTML='';
@@ -140,7 +140,7 @@ function loadPlaylist(playlistData) {
             
 
 if (!run_file){
-mainVideo.innerHTML='<div style="position:absolute;top:0;left:0;right:0;bottom:0; text-transform: uppercase;  overflow:auto; width:100%;height: 100%;text-align:center;color:#fff;background:#000;padding:5px;"><br/><br/><p>This File ID does not exist.</p><br/><br/><br/><br/><br/></div>';   }
+mainVideo.innerHTML='<div style="position:fixed;top:0;left:0;right:0;bottom:0; text-transform: uppercase;  overflow:auto; width:100%;height: 100%;text-align:center;color:#fff;background:#000;padding:5px;"><br/><br/><p>This File ID does not exist.</p><br/><br/><br/><br/><br/></div>';   }
 
             
   if(typeof run_file=='function'){  
