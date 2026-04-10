@@ -52,6 +52,9 @@ fplayeri.OnEvents("speed",function(){       fplayeri.OSD({ duration:3e3, text: '
 }
 
 
+function is_messageadd(txt,icon){   return '<div style="position:relative; display:block;top:0;left:0;right:0;bottom:0; text-transform: uppercase;  overflow:auto; height: 100%;width:100%; padding:5px;text-align:center;color:#fff;background:#000;"><br/>'+stringno_valtext(icon,"")+'<br/><p>'+stringno_valtext(txt,"")+'</p><br/><br/><br/><br/><br/></div>';  }
+
+
 
 function onstart_file(run_file){     
 var playlistData = [];
