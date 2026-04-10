@@ -52,7 +52,7 @@ function is_messageadd(txt,icon){   return '<div class="md-info"><br/>'+stringno
 
 
 function onstart_file(run_file){     
-var playlistData = [];   var currentVideoIndex=0;
+var playlistData = [];   
            
   var acssr = document.getElementById('cutompll');   
   var acssr_cover = document.querySelector('.logo img');
@@ -71,8 +71,6 @@ var playlistData = [];   var currentVideoIndex=0;
 function changeVideo(playlistData,videoId) {
     const video = playlistData.find(v => v.id === videoId);
        if (!video) return;
-  
-currentVideoIndex = videoId;
 
 //mainVideo.src = `https://player.fcasfs-of.cloud-fs.net/${run_file().player_lang}?fileID=${getfval_tyget}&fileView=true&pos=0&fileSelect=${video.videoId}`;
 
@@ -109,12 +107,12 @@ onstart_fplay(fplayeri, getfvald_tygetslpose, getfvald_ddfffle,video.id);  }
 }
 
 
-function prevVideo(playlistData) {
+function prevVideo(currentVideoIndex) {
 let newIndex = currentVideoIndex - 1;
-if (newIndex < 0) {  newIndex = playlistData.length -1;   }
+if (newIndex < 0) {  newIndex = playlistData.length - 1;   }
  changeVideo(playlistData,newIndex);
 }
-function nextVideo(playlistData) {
+function nextVideo(currentVideoIndex) {
 let newIndex = currentVideoIndex + 1;
 if (newIndex >= playlistData.length) {  newIndex = 0;    }
  changeVideo(playlistData,newIndex);
@@ -151,15 +149,9 @@ function loadPlaylist(playlistData) {
              playlistTotal.innerHTML = playlistData.length+' Video'+playlistItemsd;
 
   if(playlistData.length>=2){
-    controlsbtns.innerHTML = '  <button class="control-btn secondary" id="prevBtn">Prev</button>   <button class="control-btn secondary" id="nextBtn">Next</button>  ';
-    
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
-        if(prevBtn){   prevBtn.addEventListener('click', function(){  prevVideo(playlistData); });     }
-        if(nextBtn){   nextBtn.addEventListener('click', function(){  nextVideo(playlistData);  });    }
+    controlsbtns.innerHTML = '  <button class="control-btn secondary" onclick="prevVideo('+video.id+');">Prev</button>   <button class="control-btn secondary" onclick="nextVideo('+video.id+');">Next</button>  ';
   }
   
-
 }
             
 
