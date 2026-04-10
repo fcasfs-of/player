@@ -122,7 +122,6 @@ if (newIndex >= playlistData.length) {  newIndex = 0;    }
  changeVideo(playlistData,newIndex);
 }
 
-
             playlistContainer.innerHTML = '';
             playlistTotal.innerHTML = '';
             controlsbtns.innerHTML = '';
@@ -152,6 +151,8 @@ if (newIndex >= playlistData.length) {  newIndex = 0;    }
              playlistTotal.innerHTML = playlistData.length+' Video'+playlistItemsd;
 
   if(playlistData.length>=2){
+            controlsbtns.innerHTML = '  <button class="control-btn secondary" id="prevBtn">Prev</button>   <button class="control-btn secondary" id="nextBtn">Next</button>  ';
+    
         const prevBtn = document.getElementById('prevBtn');
         const nextBtn = document.getElementById('nextBtn');
         if(prevBtn){   prevBtn.addEventListener('click', prevVideo);     }
