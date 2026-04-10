@@ -109,19 +109,19 @@ onstart_fplay(fplayeri, getfvald_tygetslpose, getfvald_ddfffle,video.id);  }
 }
 
 
-
-function loadPlaylist(playlistData) {
-function prevVideo() {
+function prevVideo(playlistData, currentVideoIndex) {
 let newIndex = currentVideoIndex - 1;
 if (newIndex < 0) {  newIndex = playlistData.length;   }
  changeVideo(playlistData,newIndex);
 }
-function nextVideo() {
+function nextVideo(playlistData, currentVideoIndex) {
 let newIndex = currentVideoIndex + 1;
 if (newIndex >= playlistData.length) {  newIndex = 0;    }
  changeVideo(playlistData,newIndex);
 }
 
+  
+function loadPlaylist(playlistData) {
             playlistContainer.innerHTML = '';
             playlistTotal.innerHTML = '';
             controlsbtns.innerHTML = '';
@@ -151,12 +151,12 @@ if (newIndex >= playlistData.length) {  newIndex = 0;    }
              playlistTotal.innerHTML = playlistData.length+' Video'+playlistItemsd;
 
   if(playlistData.length>=2){
-          controlsbtns.innerHTML = '  <button class="control-btn secondary" id="prevBtn">Prev</button>   <button class="control-btn secondary" id="nextBtn">Next</button>  ';
+    controlsbtns.innerHTML = '  <button class="control-btn secondary" id="prevBtn">Prev</button>   <button class="control-btn secondary" id="nextBtn">Next</button>  ';
     
         const prevBtn = document.getElementById('prevBtn');
         const nextBtn = document.getElementById('nextBtn');
-        if(prevBtn){   prevBtn.addEventListener('click', prevVideo);     }
-        if(nextBtn){   nextBtn.addEventListener('click', nextVideo);    }
+        if(prevBtn){   prevBtn.addEventListener('click', function(){  prevVideo(playlistData, currentVideoIndex); });     }
+        if(nextBtn){   nextBtn.addEventListener('click', function(){  nextVideo(playlistData, currentVideoIndex);  });    }
   }
   
 
