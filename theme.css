@@ -220,7 +220,7 @@ body.darkmode::-webkit-scrollbar-thumb{
 
 
 .md-info {  position:relative; display:block;top:0;left:0;right:0;bottom:0; text-transform: uppercase;  overflow:auto; height: 100%;width:100%; padding:5px;text-align:center;color:#fff;background:#000;   }
-.md-info img {  pointer-events:none; text-align:center;margin:0 auto;display: block; width: 64px !important;   }
+.video-container .iframe #main-video .md-info img, .video-container .iframe .md-info img, .md-info img, #main-video .md-info img {  pointer-events:none; text-align:center;margin:0 auto;display: block; width: 64px !important;   object-fit: contain !important;  }
 
 
         .video-title {
