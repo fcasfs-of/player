@@ -52,7 +52,7 @@ function is_messageadd(txt,icon){   return '<div class="md-info"><br/>'+stringno
 
 
 function onstart_file(run_file){     
-var playlistData = [];   var currentVideoIndex=0;
+var playlistData = [];   var currentVideoIndex=1;
            
   var acssr = document.getElementById('cutompll');   
   var acssr_cover = document.querySelector('.logo img');
@@ -69,7 +69,7 @@ var playlistData = [];   var currentVideoIndex=0;
 
 
 function changeVideo(playlistData,videoId) {
- currentVideoIndex = videoId;
+ currentVideoIndex = video.id;
 
     const video = playlistData.find(v => v.id === videoId);
        if (!video) return;
@@ -109,6 +109,8 @@ onstart_fplay(fplayeri, getfvald_tygetslpose, getfvald_ddfffle,video.id);  }
 }
 
 
+
+function loadPlaylist(playlistData) {
 function prevVideo() {
 let newIndex = currentVideoIndex - 1;
 if (newIndex < 0) {  newIndex = playlistData.length -1;   }
@@ -120,9 +122,6 @@ if (newIndex >= playlistData.length) {  newIndex = 0;    }
  changeVideo(playlistData,newIndex);
 }
 
-
-function loadPlaylist(playlistData) {
-  
             playlistContainer.innerHTML = '';
             playlistTotal.innerHTML = '';
             controlsbtns.innerHTML = '';
@@ -152,7 +151,7 @@ function loadPlaylist(playlistData) {
              playlistTotal.innerHTML = playlistData.length+' Video'+playlistItemsd;
 
   if(playlistData.length>=2){
-            controlsbtns.innerHTML = '  <button class="control-btn secondary" id="prevBtn">Prev</button>   <button class="control-btn secondary" id="nextBtn">Next</button>  ';
+          controlsbtns.innerHTML = '  <button class="control-btn secondary" id="prevBtn">Prev</button>   <button class="control-btn secondary" id="nextBtn">Next</button>  ';
     
         const prevBtn = document.getElementById('prevBtn');
         const nextBtn = document.getElementById('nextBtn');
