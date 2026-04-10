@@ -68,12 +68,25 @@ var playlistData = [];
         const pfielidtile = document.getElementById('titlemfpf');
 
 
+
+function prevVideo(playlistData, currentVideoIndex) {
+let newIndex = currentVideoIndex - 1;
+if (newIndex < 0) {  newIndex = playlistData.length - 1;   }
+ changeVideo(playlistData,newIndex);
+}
+function nextVideo(playlistData, currentVideoIndex) {
+let newIndex = currentVideoIndex + 1;
+if (newIndex >= playlistData.length) {  newIndex = 0;    }
+ changeVideo(playlistData,newIndex);
+}
+
+  
 function changeVideo(playlistData,videoId) {
     const video = playlistData.find(v => v.id === videoId);
        if (!video) return;
   
  if(playlistData.length>=2){
-    controlsbtns.innerHTML = '  <button class="control-btn secondary" onclick="prevVideo('+video.id+');">Prev</button>   <button class="control-btn secondary" onclick="nextVideo('+video.id+');">Next</button>  ';
+    controlsbtns.innerHTML = '  <button class="control-btn secondary" onclick="prevVideo(playlistData, '+video.id+');">Prev</button>   <button class="control-btn secondary" onclick="nextVideo(playlistData, '+video.id+');">Next</button>  ';
   }
   
 //mainVideo.src = `https://player.fcasfs-of.cloud-fs.net/${run_file().player_lang}?fileID=${getfval_tyget}&fileView=true&pos=0&fileSelect=${video.videoId}`;
@@ -108,18 +121,6 @@ onstart_fplay(fplayeri, getfvald_tygetslpose, getfvald_ddfffle,video.id);  }
             if (window.innerWidth < 992) {
                 document.querySelector('.video-section').scrollIntoView({ behavior: 'smooth' });
             }
-}
-
-
-function prevVideo(currentVideoIndex) {
-let newIndex = currentVideoIndex - 1;
-if (newIndex < 0) {  newIndex = playlistData.length - 1;   }
- changeVideo(playlistData,newIndex);
-}
-function nextVideo(currentVideoIndex) {
-let newIndex = currentVideoIndex + 1;
-if (newIndex >= playlistData.length) {  newIndex = 0;    }
- changeVideo(playlistData,newIndex);
 }
 
   
