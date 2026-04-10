@@ -21,16 +21,11 @@ fplayeri.OnEvents("start",function(){
 
 });
 
-
 fplayeri.OnEvents("metadata",function(){
-
 if(tid){   const mainVideotime = document.getElementById('vidlist_'+tid);  if(mainVideotime){  if(mainVideotime.innerHTML==""+convertSecondsDurationto(0) || mainVideotime.innerHTML==""){  mainVideotime.innerHTML=""+convertSecondsDurationto(Number(stringno_valtext(fplayeri.api("duration"),"0")));   }  }  }
-
 });
 
-
 fplayeri.OnEvents("init",function(){
-
 fplayeri.api("unmute");
 
 fplayeri.api('seek',Number(stringno_valtext(time,"0")));
@@ -73,7 +68,7 @@ var playlistData = [];
 function changeVideo(playlistData,videoId) {
 
     const video = playlistData.find(v => v.id === videoId);
-            if (!video) return;
+       if (!video) return;
             
 //mainVideo.src = `https://player.fcasfs-of.cloud-fs.net/${run_file().player_lang}?fileID=${getfval_tyget}&fileView=true&pos=0&fileSelect=${video.videoId}`;
 
@@ -82,17 +77,14 @@ if(run_file().fl_priv==true){  playernoprib=0;  }
 
 mainVideo.innerHTML=is_messageadd("It is not possible to access the File because it is Private.",'<img src="https://fcasfs-of.cloud-fs.net/player/fl_lock.png"/>');
 
-    
 if(playernoprib==1){
 mainVideo.innerHTML='';
 
 //if(fplayeri){  fplayeri.api("destroy");  }
 
 fplayeri = fs_Playerjs({ OSD:run_file().player_osd, id:"main-video", customtext:{age:""}, config:run_file().config, nocontrols:0, autoplay:0, loop:0, title:""+video.title, file:""+video.file, poster:""+video.thumb, player:1,"url":`https://player.fcasfs-of.cloud-fs.net/${run_file().player_lang}?fileID=${getfval_tyget}&fileView=true&pos=${getfvald_tygetslpose}&fileSelect=${video.id}`  });
-if(fplayeri){
 fplayeri.Toast("info",video.filetl,video.title);
 onstart_fplay(fplayeri, getfvald_tygetslpose, getfvald_ddfffle,video.id);  }
-}
             
             videoTitle.innerHTML = video.title;
             videoDescription.innerHTML = video.description;
@@ -176,7 +168,7 @@ function loadPlaylist(playlistData) {
     //ampmpl.innerHTML='<iframe allowfullscreen width="100%" height="350" allow="Access-Control-Allow-Origin *; accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *" sandbox="allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-storage-access-by-user-activation" frameborder="0" scrolling="no" src="'+linkfromd+'" style="border: 1px solid black"></iframe>';  
     //amptar.innerHTML="<a href='"+linkfrarromd+"'>"+run_file().file_title+"</a>"; 
     }  
-    else if(typeof run_file){   mainVideo.innerHTML=is_messageadd("This File ID does not exist.","");   }
+    else {   mainVideo.innerHTML=is_messageadd("This File ID does not exist.","");   }
 
          
     if(getfvaddl_tyget=="true"){      }  
