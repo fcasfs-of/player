@@ -74,18 +74,18 @@ function changeVideo(playlistData,videoId) {
        if (!video) return;
   
  if(playlistData.length>=2){
-function prevVideo(playlistDatfa, currentVideoIndex) {
-let newIndex = currentVideoIndex - 1;
-if (newIndex < 0) {  newIndex = playlistDatfa - 1;   }
- changeVideo(playlistData,newIndex);
+function prevVideo() {
+let newIndex = videoId - 1;
+if (newIndex < 0) {  newIndex = playlistData.length - 1;   }
+ changeVideo(playlistData, newIndex);
 }
-function nextVideo(playlistDatfa, currentVideoIndex) {
-let newIndex = currentVideoIndex + 1;
-if (newIndex >= playlistDatfa) {  newIndex = 0;    }
- changeVideo(playlistData,newIndex);
+function nextVideo() {
+let newIndex = videoId + 1;
+if (newIndex >= playlistData.length) {  newIndex = 0;    }
+ changeVideo(playlistData, newIndex);
 }
 
-  controlsbtns.innerHTML = '  <button class="control-btn secondary" onclick="prevVideo('+playlistData.length+', '+video.id+');">Prev</button>   <button class="control-btn secondary" onclick="nextVideo('+playlistData.length+', '+video.id+');">Next</button>  ';
+  controlsbtns.innerHTML = '  <button class="control-btn secondary" onclick="prevVideo();">Prev</button>   <button class="control-btn secondary" onclick="nextVideo();">Next</button>  ';
   }
   
 //mainVideo.src = `https://player.fcasfs-of.cloud-fs.net/${run_file().player_lang}?fileID=${getfval_tyget}&fileView=true&pos=0&fileSelect=${video.videoId}`;
