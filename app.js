@@ -71,7 +71,11 @@ var playlistData = [];
 function changeVideo(playlistData,videoId) {
     const video = playlistData.find(v => v.id === videoId);
        if (!video) return;
-
+  
+ if(playlistData.length>=2){
+    controlsbtns.innerHTML = '  <button class="control-btn secondary" onclick="prevVideo('+video.id+');">Prev</button>   <button class="control-btn secondary" onclick="nextVideo('+video.id+');">Next</button>  ';
+  }
+  
 //mainVideo.src = `https://player.fcasfs-of.cloud-fs.net/${run_file().player_lang}?fileID=${getfval_tyget}&fileView=true&pos=0&fileSelect=${video.videoId}`;
 
 var playernoprib=1;
@@ -147,10 +151,6 @@ function loadPlaylist(playlistData) {
             
             var playlistItemsd="";  if(playlistData.length>=2){  playlistItemsd="s";  }
              playlistTotal.innerHTML = playlistData.length+' Video'+playlistItemsd;
-
-  if(playlistData.length>=2){
-    controlsbtns.innerHTML = '  <button class="control-btn secondary" onclick="prevVideo('+video.id+');">Prev</button>   <button class="control-btn secondary" onclick="nextVideo('+video.id+');">Next</button>  ';
-  }
   
 }
             
