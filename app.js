@@ -109,12 +109,12 @@ onstart_fplay(fplayeri, getfvald_tygetslpose, getfvald_ddfffle,video.id);  }
 }
 
 
-function prevVideo(playlistData, currentVideoIndex) {
+function prevVideo(playlistData) {
 let newIndex = currentVideoIndex - 1;
 if (newIndex < 0) {  newIndex = playlistData.length -1;   }
  changeVideo(playlistData,newIndex);
 }
-function nextVideo(playlistData, currentVideoIndex) {
+function nextVideo(playlistData) {
 let newIndex = currentVideoIndex + 1;
 if (newIndex >= playlistData.length) {  newIndex = 0;    }
  changeVideo(playlistData,newIndex);
@@ -155,8 +155,8 @@ function loadPlaylist(playlistData) {
     
         const prevBtn = document.getElementById('prevBtn');
         const nextBtn = document.getElementById('nextBtn');
-        if(prevBtn){   prevBtn.addEventListener('click', function(){  prevVideo(playlistData, currentVideoIndex); });     }
-        if(nextBtn){   nextBtn.addEventListener('click', function(){  nextVideo(playlistData, currentVideoIndex);  });    }
+        if(prevBtn){   prevBtn.addEventListener('click', function(){  prevVideo(playlistData); });     }
+        if(nextBtn){   nextBtn.addEventListener('click', function(){  nextVideo(playlistData);  });    }
   }
   
 
