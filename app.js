@@ -52,7 +52,7 @@ fplayeri.OnEvents("speed",function(){       fplayeri.OSD({ duration:3e3, text: '
 }
 
 
-function is_messageadd(txt,icon){   return '<div class="md-info"><br/>'+stringno_valtext(icon,"")+'<br/><p>'+stringno_valtext(txt,"")+'</p><br/><br/><br/><br/><br/></div>';  }
+function is_messageadd(txt,icon){   return '<div class="md-info"><br/>'+stringno_valtext(icon,"")+'<br/><p>'+stringno_valtext(txt,"")+'</p><br/><br/><br/></div>';  }
 
 
 
