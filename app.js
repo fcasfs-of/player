@@ -69,10 +69,10 @@ var playlistData = [];   var currentVideoIndex=1;
 
 
 function changeVideo(playlistData,videoId) {
- currentVideoIndex = video.id;
-
     const video = playlistData.find(v => v.id === videoId);
        if (!video) return;
+  
+ currentVideoIndex = video.id;
             
 //mainVideo.src = `https://player.fcasfs-of.cloud-fs.net/${run_file().player_lang}?fileID=${getfval_tyget}&fileView=true&pos=0&fileSelect=${video.videoId}`;
 
