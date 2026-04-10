@@ -134,7 +134,26 @@ body.darkmode::-webkit-scrollbar-thumb{
 
 
 
-      * {
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #1e293b;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #475569;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #64748b;
+        }
+
+
+
+       * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -311,6 +330,37 @@ body.darkmode::-webkit-scrollbar-thumb{
 
         .playlist-item.active i {            color: white;        }
 
+
+        .video-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background-color: #1e293b;
+            border-radius: 0 0 12px 12px;
+        }
+
+        .control-btn {
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+
+        .control-btn:hover {            background-color: #2563eb;        }
+
+        .control-btn.secondary {            background-color: #475569;        }
+
+        .control-btn.secondary:hover {            background-color: #334155;        }
+
+
         footer {
             text text-align: center;
             margin-top: 50px;
@@ -334,9 +384,25 @@ body.darkmode::-webkit-scrollbar-thumb{
             .playlist-item {                padding: 12px;            }
             
             .playlist-item-thumb {                width: 70px;                height: 45px;            }
+
+          .video-controls {                flex-direction: column;                gap:  15px;                align-items: stretch;            }
+
+          .control-btn {                justify-content: center;            }
+          
         }
 
-        @media (max-width: 576px) {
+        @media (max-width: 480px) {
+          
+            .playlist-item-thumb {
+                width: 100%;
+                height: 150px;
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+          
+        }
+
+       @media (max-width: 576px) {
             .container {                padding: 15px;            }
             
             .logo h1 {                font-size: 1.8rem;            }
