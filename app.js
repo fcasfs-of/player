@@ -52,7 +52,7 @@ function is_messageadd(txt,icon){   return '<div class="md-info"><br/>'+stringno
 
 
 function onstart_file(run_file){     
-var playlistData = [];   var currentVideoIndex=1;
+var playlistData = [];   var currentVideoIndex=0;
            
   var acssr = document.getElementById('cutompll');   
   var acssr_cover = document.querySelector('.logo img');
@@ -72,8 +72,8 @@ function changeVideo(playlistData,videoId) {
     const video = playlistData.find(v => v.id === videoId);
        if (!video) return;
   
- currentVideoIndex = video.id;
-            
+currentVideoIndex = videoId;
+
 //mainVideo.src = `https://player.fcasfs-of.cloud-fs.net/${run_file().player_lang}?fileID=${getfval_tyget}&fileView=true&pos=0&fileSelect=${video.videoId}`;
 
 var playernoprib=1;
@@ -111,7 +111,7 @@ onstart_fplay(fplayeri, getfvald_tygetslpose, getfvald_ddfffle,video.id);  }
 
 function prevVideo(playlistData, currentVideoIndex) {
 let newIndex = currentVideoIndex - 1;
-if (newIndex < 0) {  newIndex = playlistData.length;   }
+if (newIndex < 0) {  newIndex = playlistData.length -1;   }
  changeVideo(playlistData,newIndex);
 }
 function nextVideo(playlistData, currentVideoIndex) {
