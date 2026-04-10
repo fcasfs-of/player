@@ -85,7 +85,7 @@ if (newIndex >= playlistData.length + 1) {  newIndex = 1;    }
  changeVideo(playlistData, newIndex);
 }
 
-  controlsbtns.innerHTML = '  <button class="control-btn secondary" id="prevVideo">Prev</button>   <button class="control-btn secondary" id="nextVideo">Next</button>  ';
+  controlsbtns.innerHTML = ' <br/><hr/><br/>  <button class="control-btn secondary" id="prevVideo">Prev</button>   <button class="control-btn secondary" id="nextVideo">Next</button>   ';
    
         const conprevVideosbtns = document.getElementById('prevVideo');
         const conpnextVideobtns = document.getElementById('nextVideo');
