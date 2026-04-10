@@ -52,10 +52,13 @@ function is_messageadd(txt,icon){   return '<div class="md-info"><br/>'+stringno
 
 
 function onstart_file(run_file){     
-var playlistData = [];
+var playlistData = [];   var currentVideoIndex=0;
            
   var acssr = document.getElementById('cutompll');   
   var acssr_cover = document.querySelector('.logo img');
+  
+        const controlsbtns = document.getElementById('ctbtnss');
+    
         const mainVideo = document.getElementById('main-video');
         const mainVtha = document.getElementById('infotime');
         const videoTitle = document.getElementById('video-title');
@@ -66,6 +69,7 @@ var playlistData = [];
 
 
 function changeVideo(playlistData,videoId) {
+ currentVideoIndex = videoId;
 
     const video = playlistData.find(v => v.id === videoId);
        if (!video) return;
@@ -104,10 +108,25 @@ onstart_fplay(fplayeri, getfvald_tygetslpose, getfvald_ddfffle,video.id);  }
             }
 }
 
+  
 function loadPlaylist(playlistData) {
+
+function prevVideo() {
+let newIndex = currentVideoIndex - 1;
+if (newIndex < 0) {  newIndex = playlistData.length - 1;   }
+ changeVideo(playlistData,newIndex);
+}
+function nextVideo() {
+let newIndex = currentVideoIndex + 1;
+if (newIndex >= playlistData.length) {  newIndex = 0;    }
+ changeVideo(playlistData,newIndex);
+}
+
+
             playlistContainer.innerHTML = '';
             playlistTotal.innerHTML = '';
-
+            controlsbtns.innerHTML = '';
+  
             playlistData.forEach(video => {
                 const playlistItem = document.createElement('div');
                 playlistItem.className = `playlist-item ${video.active ? 'active' : ''}`;
@@ -131,6 +150,14 @@ function loadPlaylist(playlistData) {
             
             var playlistItemsd="";  if(playlistData.length>=2){  playlistItemsd="s";  }
              playlistTotal.innerHTML = playlistData.length+' Video'+playlistItemsd;
+
+  if(playlistData.length>=2){
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        if(prevBtn){   prevBtn.addEventListener('click', prevVideo);     }
+        if(nextBtn){   nextBtn.addEventListener('click', nextVideo);    }
+  }
+  
 
 }
             
