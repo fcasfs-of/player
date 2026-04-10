@@ -68,7 +68,12 @@ var playlistData = [];
         const pfielidtile = document.getElementById('titlemfpf');
 
 
-
+  
+function changeVideo(playlistData,videoId) {
+    const video = playlistData.find(v => v.id === videoId);
+       if (!video) return;
+  
+ if(playlistData.length>=2){
 function prevVideo(playlistDatfa, currentVideoIndex) {
 let newIndex = currentVideoIndex - 1;
 if (newIndex < 0) {  newIndex = playlistDatfa - 1;   }
@@ -80,13 +85,7 @@ if (newIndex >= playlistDatfa) {  newIndex = 0;    }
  changeVideo(playlistData,newIndex);
 }
 
-  
-function changeVideo(playlistData,videoId) {
-    const video = playlistData.find(v => v.id === videoId);
-       if (!video) return;
-  
- if(playlistData.length>=2){
-    controlsbtns.innerHTML = '  <button class="control-btn secondary" onclick="prevVideo('+playlistData.length+', '+video.id+');">Prev</button>   <button class="control-btn secondary" onclick="nextVideo('+playlistData.length+', '+video.id+');">Next</button>  ';
+  controlsbtns.innerHTML = '  <button class="control-btn secondary" onclick="prevVideo('+playlistData.length+', '+video.id+');">Prev</button>   <button class="control-btn secondary" onclick="nextVideo('+playlistData.length+', '+video.id+');">Next</button>  ';
   }
   
 //mainVideo.src = `https://player.fcasfs-of.cloud-fs.net/${run_file().player_lang}?fileID=${getfval_tyget}&fileView=true&pos=0&fileSelect=${video.videoId}`;
