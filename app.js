@@ -77,7 +77,7 @@ function changeVideo(playlistData,videoId) {
 var playernoprib=1;
 if(run_file().fl_priv==true){  playernoprib=0;  }
 
-mainVideo.innerHTML='<div style="text-transform: uppercase;  overflow:auto; min-height: 100%;width:100%; padding:5px;text-align:center;color:#fff;background:#000;"><br/><img style="display:block;  pointer-events:none;  width:64px;  text-align:center;margin:0 auto;" src="https://fcasfs-of.cloud-fs.net/player/fl_lock.png"/><br/><p>It is not possible to access the File because it is Private.</p><br/><br/><br/><br/><br/></div>';
+mainVideo.innerHTML='<div style="position:relative; text-transform: uppercase;  overflow:auto; min-height: 100%;width:100%; padding:5px;text-align:center;color:#fff;background:#000;"><br/><img style="display:block;  pointer-events:none;  width:64px;  text-align:center;margin:0 auto;" src="https://fcasfs-of.cloud-fs.net/player/fl_lock.png"/><br/><p>It is not possible to access the File because it is Private.</p><br/><br/><br/><br/><br/></div>';
     
 if(playernoprib==1){
 mainVideo.innerHTML='';
