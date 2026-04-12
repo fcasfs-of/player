@@ -49,6 +49,29 @@ return "";   }
 
 var getfval_tyget=getUrlParameter("fileID");
 	
+
+if (getfval_tyget=="") {
+var getfval_tygddet=getUrlParameter("fileLINK");
+	if (getfval_tygddet!="") {
+var getfvald_ddfffle="0";
+var getfvald_tygetsle="1";
+var getfvald_tygetslpose="0";
+var getfvalddd_tyget=getUrlParameter("pos");
+if (getfvalddd_tyget!="") {
+getfvald_tygetslpose=getfvalddd_tyget;
+}
+
+if(getfvalddd_tyget==""){
+var getfvalddd6dd_tyget=getUrlParameter("time");
+if (getfvalddd6dd_tyget!="") {
+getfvald_tygetslpose=convertDurationtoSeconds(getfvalddd6dd_tyget);
+}   }
+
+
+
+}  }
+
+
 if (getfval_tyget!="") {
 	
   var getfvaddl_tyget=getUrlParameter("cover");
