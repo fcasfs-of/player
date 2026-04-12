@@ -120,8 +120,12 @@ onstart_fplay(fplayeri, getfvald_tygetslpose, getfvald_ddfffle,video.id);  }
             videoTitle.innerHTML = video.title;
 
 if(video.title==""){   
+fplayeri.OnEvents("init",function(){    
 fplayeri.OnEvents("metadata",function(){    const mainVideddotime = document.getElementById('tvidlist_'+video.id);  if(mainVideddotime){  if(mainVideddotime.innerHTML=="undefined" || mainVideddotime.innerHTML=="" || mainVideddotime.innerHTML=="Tech: Player"){  videoTitle.innerHTML=""+fplayeri.api("title");  mainVideddotime.innerHTML=""+fplayeri.api("title");  }  }  });   
-fplayeri.OnEvents("init",function(){    const mainVideddotime = document.getElementById('tvidlist_'+video.id);  if(mainVideddotime){  if(mainVideddotime.innerHTML=="undefined" || mainVideddotime.innerHTML=="" || mainVideddotime.innerHTML=="Tech: Player"){  videoTitle.innerHTML=""+fplayeri.api("title");  mainVideddotime.innerHTML=""+fplayeri.api("title");  }  }  }); 
+
+fplayeri.OnEvents("start",function(){    const mainVideddotime = document.getElementById('tvidlist_'+video.id);  if(mainVideddotime){  if(mainVideddotime.innerHTML=="undefined" || mainVideddotime.innerHTML=="" || mainVideddotime.innerHTML=="Tech: Player"){  videoTitle.innerHTML=""+fplayeri.api("title");  mainVideddotime.innerHTML=""+fplayeri.api("title");  }  }  });   
+
+}); 
 }
 
 
