@@ -79,7 +79,7 @@ player_loop:0,
  file_desc:"",
 config:{ osd:{  theme:"light" }, fontweight:"bold" },
  list:[
-{ poster:"",title:"",file:""+getfval_tygddet }
+{ poster:"player_banner.jpg",title:"",file:""+getfval_tygddet }
 ],
  cover:"player_banner.jpg"  };
 });
