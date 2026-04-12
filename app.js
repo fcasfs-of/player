@@ -162,10 +162,17 @@ function loadPlaylist(playlistData) {
 
    
   if(typeof run_file=='function'){  
+
+var stillist="";
+if(getfvald_ddfffle=="1"){
+stillist="";
+}
+
     var sryrkk="<style>  .markdown-body blockquote #mpd, #mpd { color:#000;  }   body img{ pointer-events:none; } </style>";  
     if(run_file().pg_dark==true){  
-      sryrkk="<style> .markdown-body blockquote #mpd, #mpd { color:#fff;  }  body, body img, .markdown-body div, .markdown-body blockquote, .markdown-body h3, .markdown-body h3 a { color:#fff; background:#111; }  .markdown-body h2 img, .markdown-body h2{   color:#fff;  background:#111;  background-color:#111;   } body img{ pointer-events:none; }  </style>";  
+      sryrkk="<style>  .markdown-body blockquote #mpd, #mpd { color:#fff;  }  body, body img, .markdown-body div, .markdown-body blockquote, .markdown-body h3, .markdown-body h3 a { color:#fff; background:#111; }  .markdown-body h2 img, .markdown-body h2{   color:#fff;  background:#111;  background-color:#111;   } body img{ pointer-events:none; }  </style>";  
     }  
+
     acssr.innerHTML=sryrkk;  
     document.title='Player: '+run_file().file_title+' - '+document.title;  
     videoDescription.innerHTML=run_file().file_desc;  
