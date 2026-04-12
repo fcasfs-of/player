@@ -276,6 +276,10 @@ summary::-webkit-details-marker {
   transform: rotate(180deg); 
 }
 
+.acc-item.is-open { 
+  text-align: center;
+}
+
 
 
 
