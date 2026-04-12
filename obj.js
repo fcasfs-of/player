@@ -53,7 +53,7 @@ var getfval_tyget=getUrlParameter("fileID");
 if (getfval_tyget=="") {
 var getfval_tygddet=getUrlParameter("fileLINK");
 	if (getfval_tygddet!="") {
-var getfvald_ddfffle="0";
+var getfvald_ddfffle="1";
 var getfvald_tygetsle="1";
 var getfvald_tygetslpose="0";
 var getfvalddd_tyget=getUrlParameter("pos");
