@@ -72,7 +72,7 @@ var getfvalddd_tyget=getUrlParameter("pos");
 if (getfvalddd_tyget!="") {
 getfvald_tygetslpose=getfvalddd_tyget;
 }
-
+//convertDurationtoSeconds
 
   var scriptfd = document.createElement("script");
     scriptfd.setAttribute("type", "text/javascript");
