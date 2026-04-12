@@ -72,7 +72,14 @@ var getfvalddd_tyget=getUrlParameter("pos");
 if (getfvalddd_tyget!="") {
 getfvald_tygetslpose=getfvalddd_tyget;
 }
-//convertDurationtoSeconds
+
+if(getfvalddd_tyget==""){
+var getfvalddd6dd_tyget=getUrlParameter("time");
+if (getfvalddd6dd_tyget!="") {
+getfvald_tygetslpose=convertDurationtoSeconds(getfvalddd6dd_tyget);
+}   }
+
+
 
   var scriptfd = document.createElement("script");
     scriptfd.setAttribute("type", "text/javascript");
