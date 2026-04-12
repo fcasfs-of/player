@@ -85,12 +85,13 @@ if (newIndex >= playlistData.length + 1) {  newIndex = 1;    }
  changeVideo(playlistData, newIndex);
 }
 
-  controlsbtns.innerHTML = '  <button class="control-btn secondary" id="prevVideo">Prev</button>   <button class="control-btn secondary" id="nextVideo">Next</button>   ';
+  if(getfvald_ddfffle=="1"){
+controlsbtns.innerHTML = '  <button class="control-btn secondary" id="prevVideo">Prev</button>   <button class="control-btn secondary" id="nextVideo">Next</button>   ';
    
         const conprevVideosbtns = document.getElementById('prevVideo');
         const conpnextVideobtns = document.getElementById('nextVideo');
         conprevVideosbtns.addEventListener('click', prevVideo);
-        conpnextVideobtns.addEventListener('click', nextVideo);
+        conpnextVideobtns.addEventListener('click', nextVideo);    }
   }
   
 //mainVideo.src = `https://player.fcasfs-of.cloud-fs.net/${run_file().player_lang}?fileID=${getfval_tyget}&fileView=true&pos=0&fileSelect=${video.videoId}`;
@@ -163,14 +164,14 @@ function loadPlaylist(playlistData) {
    
   if(typeof run_file=='function'){  
 
-var stillist="";
+var stillist="  .playlist-section {  display:none;  }   ";
 if(getfvald_ddfffle=="1"){
 stillist="";
 }
 
-    var sryrkk="<style>  .markdown-body blockquote #mpd, #mpd { color:#000;  }   body img{ pointer-events:none; } </style>";  
+    var sryrkk="<style> "+stillist+" .markdown-body blockquote #mpd, #mpd { color:#000;  }   body img{ pointer-events:none; } </style>";  
     if(run_file().pg_dark==true){  
-      sryrkk="<style>  .markdown-body blockquote #mpd, #mpd { color:#fff;  }  body, body img, .markdown-body div, .markdown-body blockquote, .markdown-body h3, .markdown-body h3 a { color:#fff; background:#111; }  .markdown-body h2 img, .markdown-body h2{   color:#fff;  background:#111;  background-color:#111;   } body img{ pointer-events:none; }  </style>";  
+      sryrkk="<style> "+stillist+" .markdown-body blockquote #mpd, #mpd { color:#fff;  }  body, body img, .markdown-body div, .markdown-body blockquote, .markdown-body h3, .markdown-body h3 a { color:#fff; background:#111; }  .markdown-body h2 img, .markdown-body h2{   color:#fff;  background:#111;  background-color:#111;   } body img{ pointer-events:none; }  </style>";  
     }  
 
     acssr.innerHTML=sryrkk;  
