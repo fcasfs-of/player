@@ -68,8 +68,20 @@ getfvald_tygetslpose=convertDurationtoSeconds(getfvalddd6dd_tyget);
 }   }
 
 
-onstart_file(function(){
-
+onstart_file(function(){  return { 
+player_lang:"en", 
+pg_dark:false,
+player_osd:true,
+player_controls:0,
+player_autoplay:0,
+player_loop:0,
+ file_title:"",
+ file_desc:"",
+config:{ osd:{  theme:"light" }, fontweight:"bold" },
+ list:[
+{poster:"",title:"",file:""+getfval_tygddet }
+],
+ cover:""  };
 });
 }  }
 
