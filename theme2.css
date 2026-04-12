@@ -223,9 +223,7 @@ position: relative;
 
 .accordion-group { 
   width: 100%; 
-  max-width: 550px; 
-  box-sizing: 
-  border-box; 
+  box-sizing: border-box; 
   font-size: 14px; 
 }
 .acc-item { 
