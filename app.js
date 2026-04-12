@@ -118,6 +118,11 @@ fplayeri.Toast("info",video.filetl,video.title);
 onstart_fplay(fplayeri, getfvald_tygetslpose, getfvald_ddfffle,video.id);  }
             
             videoTitle.innerHTML = video.title;
+
+fplayeri.OnEvents("init",function(){   if(videoTitle.innerHTML=""){   videoTitle.innerHTML="";  }  
+
+});
+
             videoDescription.innerHTML = video.description;
             
             playlistData.forEach(v => v.active = v.id === videoId);
@@ -186,7 +191,7 @@ stillist="";
     videoDescription.innerHTML=run_file().file_desc;  
     pfielidtile.innerHTML='Media Player';  
     mainVtha.innerHTML=''+run_file().file_title+'';
-     acssr_cover.src = `${run_file().cover}`;    acssr_cover.style.width="160px";      acssr_cover.style.borderRadius = "20px";   
+ if(run_file().cover!=""){    acssr_cover.src = `${run_file().cover}`;    acssr_cover.style.width="160px";  acssr_cover.style.borderRadius = "20px";   }
     var linkfroplauemd="https://fcasfs-of.cloud-fs.net/player/?fileID="+getfval_tyget+"";   
     var linkfrarromd="https://player.fcasfs-of.cloud-fs.net/"+run_file().player_lang+"?fileID="+getfval_tyget+"&fileView=true";  
     var linkfromd="https://player.fcasfs-of.cloud-fs.net/"+run_file().player_lang+"?fileID="+getfval_tyget+"&fileView=true&fileSelect="+getfvald_tygetsle+"&pos="+getfvald_tygetslpose; 
