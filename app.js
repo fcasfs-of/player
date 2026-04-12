@@ -119,7 +119,7 @@ onstart_fplay(fplayeri, getfvald_tygetslpose, getfvald_ddfffle,video.id);  }
             
             videoTitle.innerHTML = video.title;
 
-fplayeri.OnEvents("init",function(){   if(videoTitle.innerHTML=""){   videoTitle.innerHTML="";  }  
+fplayeri.OnEvents("init",function(){   if(videoTitle.innerHTML=""){   videoTitle.innerHTML=""+fplayeri.api("title");  }  
 
 });
 
