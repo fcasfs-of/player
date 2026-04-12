@@ -114,12 +114,13 @@ configpllof = { OSD:run_file().player_osd, id:"main-video", customtext:{age:""},
 }
 
 fplayeri = fs_Playerjs(configpllof);
-fplayeri.Toast("info",video.filetl,video.title);
+if(video.filetl!="" && video.title!=""){   fplayeri.Toast("info",video.filetl,video.title);  }
 onstart_fplay(fplayeri, getfvald_tygetslpose, getfvald_ddfffle,video.id);  }
             
             videoTitle.innerHTML = video.title;
 
-if(videoTitle.innerHTML==""){   fplayeri.OnEvents("init",function(){    videoTitle.innerHTML=""+fplayeri.api("title");  });   }
+if(video.title==""){   fplayeri.OnEvents("metadata",function(){   
+const mainVideddotime = document.getElementById('tvidlist_'+video.id);  if(mainVideddotime){  if(mainVideddotime.innerHTML=""){   mainVideddotime.innerHTML=""+fplayeri.api("title");  }  } videoTitle.innerHTML=""+fplayeri.api("title");  });   }
 
 
 
@@ -156,7 +157,7 @@ function loadPlaylist(playlistData) {
                         <img src="${video.thumb}" alt="${video.title}">
                     </div>
                     <div class="playlist-item-info">
-                        <h3 class="playlist-item-title">${video.title}</h3>
+                        <h3 class="playlist-item-title" id="tvidlist_${video.id}">${video.title}</h3>
                         <p class="playlist-item-duration" id="vidlist_${video.id}"></p>
                     </div>
                 `;
