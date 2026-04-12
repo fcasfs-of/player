@@ -107,8 +107,11 @@ mainVideo.innerHTML='';
 //if(fplayeri){  fplayeri.api("destroy");  }
 
 
-var configpllof = { OSD:run_file().player_osd, id:"main-video", customtext:{age:""}, config:run_file().config, nocontrols:0, autoplay:0, loop:0, title:""+video.title, file:""+video.file, poster:""+video.thumb, player:1, casturl:""+video.file, castname:""+video.title,"embed":`https://player.fcasfs-of.cloud-fs.net/${run_file().player_lang}?fileID=${getfval_tyget}&fileView=true&pos=${getfvald_tygetslpose}&fileSelect=${video.id}`,"url":`https://player.fcasfs-of.cloud-fs.net/${run_file().player_lang}?fileID=${getfval_tyget}&fileView=true&pos=${getfvald_tygetslpose}&fileSelect=${video.id}`  };
+var configpllof = { OSD:run_file().player_osd, id:"main-video", customtext:{age:""}, config:run_file().config, nocontrols:0, autoplay:0, loop:0, title:""+video.title, file: playlistData, poster:""+video.thumb, player:1, "embed":`https://player.fcasfs-of.cloud-fs.net/${run_file().player_lang}?fileID=${getfval_tyget}&fileView=true&pos=${getfvald_tygetslpose}&fileSelect=${video.id}`,"url":`https://player.fcasfs-of.cloud-fs.net/${run_file().player_lang}?fileID=${getfval_tyget}&fileView=true&pos=${getfvald_tygetslpose}&fileSelect=${video.id}`, plstart:""+video.id  };
 
+if(getfvald_ddfffle=="1"){
+configpllof = { OSD:run_file().player_osd, id:"main-video", customtext:{age:""}, config:run_file().config, nocontrols:0, autoplay:0, loop:0, title:""+video.title, file:""+video.file, poster:""+video.thumb, player:1, casturl:""+video.file, castname:""+video.title,"embed":`https://player.fcasfs-of.cloud-fs.net/${run_file().player_lang}?fileID=${getfval_tyget}&fileView=true&pos=${getfvald_tygetslpose}&fileSelect=${video.id}`,"url":`https://player.fcasfs-of.cloud-fs.net/${run_file().player_lang}?fileID=${getfval_tyget}&fileView=true&pos=${getfvald_tygetslpose}&fileSelect=${video.id}`  };
+}
 
 fplayeri = fs_Playerjs(configpllof);
 fplayeri.Toast("info",video.filetl,video.title);
@@ -195,8 +198,14 @@ stillist="";
              
    for(var j=0; j<run_file().list.length; j++){
     checjfdk=false;  if(j==checjfdksd){   checjfdk=true;  }
- playlistData.push({ id:j+1, filetl: run_file().file_title, title: run_file().list[j].title, file: run_file().list[j].file, description: run_file().file_desc, videoId: j+1, duration: "", views: "", date: "", category: "", thumb: run_file().list[j].poster, active: checjfdk  });
+
+var itenslifffd={ id:""+j+1, filetl: run_file().file_title, title: run_file().list[j].title, file: run_file().list[j].file, description: run_file().file_desc, videoId: j+1, casturl:run_file().list[j].file, castname:run_file().list[j].title, duration: "", views: "", date: "", category: "", thumb: run_file().list[j].poster, active: checjfdk  };
+if(getfvald_ddfffle=="1"){
+itenslifffd={ id:j+1, filetl: run_file().file_title, title: run_file().list[j].title, file: run_file().list[j].file, description: run_file().file_desc, videoId: j+1, duration: "", views: "", date: "", category: "", thumb: run_file().list[j].poster, active: checjfdk  };
+}
+ playlistData.push(itenslifffd);
    }
+
 
       loadPlaylist(playlistData);
       const currentVideo = playlistData.find(v => v.active);
