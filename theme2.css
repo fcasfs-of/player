@@ -241,7 +241,7 @@ position: relative;
 .acc-item:last-child { 
   margin-bottom: 0; 
 }
-.accordion-group summary { 
+.accordion-group .acc-item summary { 
   padding: 16px; 
   display: flex; 
   justify-content: space-between; 
@@ -252,7 +252,7 @@ position: relative;
   color: #1e293b; 
   transition: background 0.2s ease; 
 }
-.accordion-group summary:hover { 
+.accordion-group .acc-item summary:hover { 
   background: #f8fafc; }
 summary::-webkit-details-marker { 
   display: none; 
