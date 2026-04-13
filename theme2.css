@@ -278,8 +278,7 @@ summary::-webkit-details-marker {
 
 .acc-item.is-open summary span { 
   text-align: center;
-  font-weight: 600;
-margin: 0 auto;
+width: 80%;
 }
 
 
