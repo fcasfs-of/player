@@ -25,7 +25,7 @@ var liestrood="";   var liestrddfood="";
 if(iye[j].open && iye[j].open==true){  liestrddfood=" is-open";  }
 
 if(iye[j].txt && iye[j].txt!="" && iye[j].name && iye[j].name!=""){ 
-liestrood=liestrood+'<details class="acc-item'+liestrddfood+'">    <summary>      <span>'+iye[j].name+'</span>         <span class="acc-icon">▼</span>    </summary>    <div class="content-wrapper">     <div class="content-body">'+iye[j].txt+'</div>    </div>  </details>';
+liestrood=liestrood+'<details class="acc-item">    <summary>      <span>'+iye[j].name+'</span>         <span class="acc-icon">▼</span>    </summary>    <div class="content-wrapper'+liestrddfood+'">     <div class="content-body">'+iye[j].txt+'</div>    </div>  </details>';
 }
    }
 
