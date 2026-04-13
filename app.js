@@ -92,7 +92,7 @@ var btenvoltr='<button class="control-btn secondary" id="prevVideo">Prev</button
 var btenproxim='<button class="control-btn secondary" id="nextVideo">Next</button>';
 
 if (videoId <= 1) {  btenvoltr='';  }
-if (videoId >= playlistData.length + 1) {  btenproxim='';  }
+if (videoId >= playlistData.length) {  btenproxim='';  }
 
 
 controlsbtns.innerHTML = btenvoltr+'   '+btenproxim+'   ';
