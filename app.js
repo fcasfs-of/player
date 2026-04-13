@@ -99,7 +99,7 @@ controlsbtns.innerHTML = btenvoltr+'   '+btenproxim+'   ';
    
         const conprevVideosbtns = document.getElementById('prevVideo');
         const conpnextVideobtns = document.getElementById('nextVideo');
-        if(conprevVideosbtns {   conprevVideosbtns.addEventListener('click', prevVideo);  }
+        if(conprevVideosbtns){   conprevVideosbtns.addEventListener('click', prevVideo);  }
         if(conpnextVideobtns){  conpnextVideobtns.addEventListener('click', nextVideo);   } 
   }
   }
