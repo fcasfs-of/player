@@ -15,9 +15,15 @@ const autoClose = true;
 
 
 
-function dpro_add(id) {  if(id && id!=""){ 
+function dpro_add(id, iye) {  if(iye && id && id!=""){ 
 const mainVidime = document.getElementById(id); 
 if(mainVidime){
+
+var liestrood="";
+   for(var j=0; j<iye.length; j++){
+   }
+
+mainVidime.innerHTML=liestrood;
 
 }  }
 }
