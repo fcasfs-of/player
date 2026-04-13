@@ -1,8 +1,14 @@
+
+function stringno_valtext(id,g) {   if (id == null || id === "" || id === "undefined") {     return g;    }    return id;   }
+
+
+
   function progress_valo(mumh) {  var mumhf=0;    
 if(mumh){   mumhf=mumh;
 if(mumh<=9){  mumhf="0"+mumh;  }
 }
 return mumhf;  }
+
 
 
 const autoClose = true;
