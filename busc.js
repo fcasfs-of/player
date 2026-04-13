@@ -21,6 +21,9 @@ if(mainVidime){
 
 var liestrood="";
    for(var j=0; j<iye.length; j++){
+if(iye[j].txt && iye[j].txt!="" && iye[j].name && iye[j].name!=""){ 
+liestrood=liestrood+'<details class="acc-item">    <summary>      <span>'+iye[j].name+'</span>         <span class="acc-icon">▼</span>    </summary>    <div class="content-wrapper">     <div class="content-body">'+iye[j].txt+'</div>    </div>  </details>';
+}
    }
 
 mainVidime.innerHTML=liestrood;
