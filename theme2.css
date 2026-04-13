@@ -276,7 +276,7 @@ summary::-webkit-details-marker {
   transform: rotate(180deg); 
 }
 
-.acc-item.is-open summary span { 
+.accordion-group .acc-item.is-open summary { 
   text-align: center;
 }
 
