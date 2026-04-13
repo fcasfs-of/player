@@ -87,12 +87,21 @@ if (newIndex >= playlistData.length + 1) {  newIndex = 1;    }
 }
 
   if(getfvald_ddfffle=="1"){
-controlsbtns.innerHTML = '  <button class="control-btn secondary" id="prevVideo">Prev</button>   <button class="control-btn secondary" id="nextVideo">Next</button>   ';
+
+var btenvoltr='<button class="control-btn secondary" id="prevVideo">Prev</button>';
+var btenproxim='<button class="control-btn secondary" id="nextVideo">Next</button>';
+
+if (videoId <= 1) {  btenvoltr='';  }
+if (videoId >= playlistData.length + 1) {  btenproxim='';  }
+
+
+controlsbtns.innerHTML = btenvoltr+'   '+btenproxim+'   ';
    
         const conprevVideosbtns = document.getElementById('prevVideo');
         const conpnextVideobtns = document.getElementById('nextVideo');
-        conprevVideosbtns.addEventListener('click', prevVideo);
-        conpnextVideobtns.addEventListener('click', nextVideo);    }
+        if(conprevVideosbtns {   conprevVideosbtns.addEventListener('click', prevVideo);  }
+        if(conpnextVideobtns){  conpnextVideobtns.addEventListener('click', nextVideo);   } 
+  }
   }
   
 //mainVideo.src = `https://player.fcasfs-of.cloud-fs.net/${run_file().player_lang}?fileID=${getfval_tyget}&fileView=true&pos=0&fileSelect=${video.videoId}`;
