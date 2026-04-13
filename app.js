@@ -5,6 +5,7 @@ function stringno_valtext(id,g) {   if (id == null || id === "" || id === "undef
 
 
 function onstart_fplay(fplayeri, time, starr, tid){ 
+const mainVideotime = document.getElementById('vidlist_'+tid); 
 
 fplayeri.OnEvents("exitfullscreen",function(){      fplayeri.OSD({ duration:3e3, position:"absolute", text: 'Exiting FullScreen', pos: "top-center", showAction: false,  actionText: "", width: 'auto'   });  }); 
 fplayeri.OnEvents("fullscreen",function(){      fplayeri.OSD({ duration:3e3, position:"absolute", text: 'FullScreen', pos: "top-center", showAction: false,  actionText: "", width: 'auto'    });      });
@@ -22,7 +23,7 @@ fplayeri.OnEvents("start",function(){
 });
 
 fplayeri.OnEvents("metadata",function(){
-if(tid){   const mainVideotime = document.getElementById('vidlist_'+tid);  if(mainVideotime){  if(mainVideotime.innerHTML==""+convertSecondsDurationto(0) || mainVideotime.innerHTML==""){  mainVideotime.innerHTML=""+convertSecondsDurationto(Number(stringno_valtext(fplayeri.api("duration"),"0")));   }  }  }
+if(tid){    if(mainVideotime){  if(mainVideotime.innerHTML==""+convertSecondsDurationto(0) || mainVideotime.innerHTML==""){  mainVideotime.innerHTML=""+convertSecondsDurationto(Number(stringno_valtext(fplayeri.api("duration"),"0")));   }  }  }
 });
 
 fplayeri.OnEvents("init",function(){
@@ -122,6 +123,9 @@ onstart_fplay(fplayeri, getfvald_tygetslpose, getfvald_ddfffle,video.id);  }
 if(video.title==""){   
 fplayeri.OnEvents("init",function(){    
 const mainVideddotime = document.getElementById('tvidlist_'+video.id);
+
+if(mainVideddotime){  if(mainVideddotime.innerHTML=="undefined" || mainVideddotime.innerHTML=="" || mainVideddotime.innerHTML=="Tech: Player"){  videoTitle.innerHTML=""+fplayeri.api("title");  mainVideddotime.innerHTML=""+fplayeri.api("title");  }  } 
+
 
 fplayeri.OnEvents("metadata",function(){      if(mainVideddotime){  if(mainVideddotime.innerHTML=="undefined" || mainVideddotime.innerHTML=="" || mainVideddotime.innerHTML=="Tech: Player"){  videoTitle.innerHTML=""+fplayeri.api("title");  mainVideddotime.innerHTML=""+fplayeri.api("title");  }  }  });   
 
