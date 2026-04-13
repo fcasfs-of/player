@@ -19,10 +19,13 @@ function dpro_add(id, iye) {  if(iye && id && id!=""){
 const mainVidime = document.getElementById(id); 
 if(mainVidime){
 
-var liestrood="";
+var liestrood="";   var liestrddfood="";
    for(var j=0; j<iye.length; j++){
+
+if(iye[j].open && iye[j].open==true){  liestrddfood=" is-open";  }
+
 if(iye[j].txt && iye[j].txt!="" && iye[j].name && iye[j].name!=""){ 
-liestrood=liestrood+'<details class="acc-item">    <summary>      <span>'+iye[j].name+'</span>         <span class="acc-icon">▼</span>    </summary>    <div class="content-wrapper">     <div class="content-body">'+iye[j].txt+'</div>    </div>  </details>';
+liestrood=liestrood+'<details class="acc-item'+liestrddfood+'">    <summary>      <span>'+iye[j].name+'</span>         <span class="acc-icon">▼</span>    </summary>    <div class="content-wrapper">     <div class="content-body">'+iye[j].txt+'</div>    </div>  </details>';
 }
    }
 
