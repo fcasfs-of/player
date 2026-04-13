@@ -276,8 +276,10 @@ summary::-webkit-details-marker {
   transform: rotate(180deg); 
 }
 
-.accordion-group .acc-item.is-open summary { 
+.acc-item.is-open summary span { 
   text-align: center;
+  font-weight: 600;
+margin: 0 auto;
 }
 
 
