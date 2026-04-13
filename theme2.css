@@ -254,9 +254,7 @@ position: relative;
 }
 .accordion-group .acc-item summary:hover { 
   background: #f8fafc; }
-summary::-webkit-details-marker { 
-  display: none; 
-}
+.accordion-group .acc-item summary::-webkit-details-marker {   display: none;  }
 .acc-icon { 
   color: #2563eb; 
   transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
@@ -276,9 +274,9 @@ summary::-webkit-details-marker {
   transform: rotate(180deg); 
 }
 
-.acc-item.is-open summary span { 
+.acc-item.is-open summary { 
   text-align: center;
-width: 80%;
+background:#ccc;
 }
 
 
