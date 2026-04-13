@@ -14,6 +14,17 @@ return mumhf;  }
 const autoClose = true;
 
 
+
+function dpro_add(id) {  if(id && id!=""){ 
+const mainVidime = document.getElementById(id); 
+if(mainVidime){
+
+}  }
+}
+
+
+
+
 function progressScript(idf,ll) {
     const progress = (idf.value / idf.max) * 100;
   ll.textContent = progress_valo(idf.value);
