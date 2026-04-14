@@ -132,6 +132,8 @@ onstart_fplay(fplayeri, getfvald_tygetslpose, getfvald_ddfffle,video.id);  }
 if(video.title==""){   
 fplayeri.OnEvents("init",function(){    
 const mainVideddotime = document.getElementById('tvidlist_'+video.id);
+const maindVideddoposte = document.getElementById('ividlistm_'+video.id);
+
 
 if(mainVideddotime){  if(mainVideddotime.innerHTML=="undefined" || mainVideddotime.innerHTML=="" || mainVideddotime.innerHTML=="Tech: Player"){  videoTitle.innerHTML=""+fplayeri.api("title");  mainVideddotime.innerHTML=""+fplayeri.api("title");  }  } 
 
@@ -175,7 +177,7 @@ function loadPlaylist(playlistData) {
                 
                 playlistItem.innerHTML = `
                     <div class="playlist-item-thumb">
-                        <img src="${video.thumb}" alt="${video.title}">
+                        <img src="${video.thumb}" alt="${video.title}" id="ividlistm_${video.id}">
                     </div>
                     <div class="playlist-item-info">
                         <h3 class="playlist-item-title" id="tvidlist_${video.id}">${video.title}</h3>
