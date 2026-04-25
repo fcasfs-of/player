@@ -239,7 +239,11 @@ itenslifffd={ id:j+1, filetl: run_file().file_title, title: run_file().list[j].t
       loadPlaylist(playlistData);
       const currentVideo = playlistData.find(v => v.active);
        if (currentVideo) {  document.querySelector('.video-meta').innerHTML = ``;    }  
-              
+ 
+
+initSidebar_start();
+
+             
     //ampmpl.innerHTML='<iframe allowfullscreen width="100%" height="350" allow="Access-Control-Allow-Origin *; accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *" sandbox="allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-storage-access-by-user-activation" frameborder="0" scrolling="no" src="'+linkfromd+'" style="border: 1px solid black"></iframe>';  
     //amptar.innerHTML="<a href='"+linkfrarromd+"'>"+run_file().file_title+"</a>"; 
     }  
