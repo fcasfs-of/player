@@ -277,7 +277,7 @@ close: function(){  if(fplayeri){  fplayeri.api("play");  }  }
 
 fcarregarTudo([
     {
-        destino: 'head',  tag: 'script',   
+        destino: 'body',  tag: 'script',   
         atributos: {    
   'src': 'https://fcasfs-of.cloud-fs.net/sidebar/core.js',
 'onload': "initSidebar_start();"
