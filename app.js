@@ -275,7 +275,7 @@ close: function(){  if(fplayeri){  fplayeri.api("play");  }  }
 
 }   }
 
-carregarTudo([
+fcarregarTudo([
     {
         destino: 'body',  tag: 'script',   
         atributos: {    
