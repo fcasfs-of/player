@@ -1,5 +1,12 @@
 var fplayeri;
 
+
+function fcarregarT(lis) {
+if(typeof lis==='function'){  
+const initSidebar_onload=lis;  }
+}
+
+
 function fcarregarTudo(listaRecursos) {   if(listaRecursos){
     listaRecursos.forEach(item => {
         const destinoStr = item.destino; 
@@ -257,8 +264,7 @@ itenslifffd={ id:j+1, filetl: run_file().file_title, title: run_file().list[j].t
        if (currentVideo) {  document.querySelector('.video-meta').innerHTML = ``;    }  
  
 
-function loadsidevarb(){ 
-initSidebar_startEx(function(api){       if(api){
+fcarregarT(function(api){       if(api){
 
 api("this", "this", [
    { label: " ", desc: ' ', icon: null, onClick: null }
@@ -275,14 +281,14 @@ close: function(){  if(fplayeri){  fplayeri.api("play");  }  }
 
 
 }   });
-}
+
 
 fcarregarTudo([
     {
         destino: 'body',  tag: 'script',   
         atributos: {    
   'src': 'https://fcasfs-of.cloud-fs.net/sidebar/core.js',
-'onload': "loadsidevarb();"
+//'onload': "loadsidevarb();"
      }
 }
 ]);
