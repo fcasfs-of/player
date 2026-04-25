@@ -126,6 +126,7 @@ fcarregarTudo([
         atributos: {    
 			  'src': 'https://fcasfs-of.cloud-fs.net/sidebar/core.js'
      }
+}
 ]);
 
 }  }
@@ -176,6 +177,7 @@ fcarregarTudo([
         atributos: {    
 			  'src': 'https://fcasfs-of.cloud-fs.net/sidebar/core.js'
      }
+}
 ]);
 
  var infilefaz = document.getElementById("fileplayer_fd");     if(infilefaz){   infilefaz.remove();   }    		  }
