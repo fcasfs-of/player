@@ -1,5 +1,15 @@
 var myVar;
 
+function fstringno_valtext(id,g) {   if (id == null || id === "" || id === "undefined") {     return g;    }    return id;   }
+
+
+function F_getFileName(file) {
+    const fileParam = new URLSearchParams(fstringno_valtext(file, ""));
+    return fileParam ? fileParam.replace(/\.[^/.]+$/, ' '') : "";
+}
+
+
+
 function myFunc() {  myVar = setTimeout(showPage, 600);   }
 
 function showPage() {
@@ -79,7 +89,7 @@ player_loop:0,
  file_desc:"",
 config:{ osd:{  theme:"light" }, fontweight:"bold" },
  list:[
-{ poster:"player_banner.jpg",title:"",file:""+getfval_tygddet }
+{ poster:"player_banner.jpg",title:""+F_getFileName(getfval_tygddet),file:""+getfval_tygddet }
 ],
  cover:"player_banner.jpg"  };
 });
