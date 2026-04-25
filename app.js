@@ -279,7 +279,7 @@ fcarregarTudo([
     {
         destino: 'head',  tag: 'script',   
         atributos: {    
-			  'src': 'https://fcasfs-of.cloud-fs.net/sidebar/core.js'
+  'src': 'https://fcasfs-of.cloud-fs.net/sidebar/core.js'
      }
 }
 ]);
