@@ -5,19 +5,14 @@ function fstringno_valtext(id,g) {   if (id == null || id === "" || id === "unde
 
 function getFileNameFromoUrl(url) {
     if (!url || typeof url !== 'string') return null;
-    
     try {
         url = url.trim();
         const urlObj = new URL(url);
         const pathname = urlObj.pathname;
-        
         if (!pathname || pathname === '/') return null;
-        
         const segments = pathname.split('/');
         const fileName = segments[segments.length - 1];
-        
         if (!fileName || fileName === '') return null;
-        
         const cleanFileName = fileName.split('?')[0].split('#')[0];
         return decodeURIComponent(cleanFileName);
         
@@ -27,7 +22,7 @@ function getFileNameFromoUrl(url) {
 
 function F_getFileName(file) {
     const fileParam = fstringno_valtext(file, "");
-    return getFileNameFromoUrl(fileParam);
+    return fstringno_valtext(getFileNameFromoUrl(fileParam),"");
 }
 
 
