@@ -257,7 +257,7 @@ itenslifffd={ id:j+1, filetl: run_file().file_title, title: run_file().list[j].t
        if (currentVideo) {  document.querySelector('.video-meta').innerHTML = ``;    }  
  
 
-function initSidebar_onload(api){       if(api){
+function dinitSidebar_onload(api){       if(api){
 
 api("this", "this", [
    { label: " ", desc: ' ', icon: null, onClick: null }
@@ -280,11 +280,10 @@ fcarregarTudo([
         destino: 'body',  tag: 'script',   
         atributos: {    
   'src': 'https://fcasfs-of.cloud-fs.net/sidebar/core.js',
-'onload': "initSidebar_start();"
+'onload': "initSidebar_startEx(dinitSidebar_onload);"
      }
 }
 ]);
-initSidebar_start();
 
 
              
