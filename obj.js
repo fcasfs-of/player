@@ -120,15 +120,6 @@ config:{ osd:{  theme:"light" }, fontweight:"bold" },
  cover:"player_banner.jpg"  };
 });
 
-fcarregarTudo([
-    {
-        destino: 'body',  tag: 'script',   
-        atributos: {    
-			  'src': 'https://fcasfs-of.cloud-fs.net/sidebar/core.js'
-     }
-}
-]);
-
 }  }
 
 
@@ -170,17 +161,7 @@ getfvald_tygetslpose=convertDurationtoSeconds(getfvalddd6dd_tyget);
     scriptfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/file/"+getfval_tyget+".js");
 document.getElementsByTagName("body")[0].appendChild(scriptfd);
 
-  function remover_id_playerfile(){ 
-fcarregarTudo([
-    {
-        destino: 'body',  tag: 'script',   
-        atributos: {    
-			  'src': 'https://fcasfs-of.cloud-fs.net/sidebar/core.js'
-     }
-}
-]);
-
- var infilefaz = document.getElementById("fileplayer_fd");     if(infilefaz){   infilefaz.remove();   }    		  }
+  function remover_id_playerfile(){  var infilefaz = document.getElementById("fileplayer_fd");     if(infilefaz){   infilefaz.remove();   }    		  }
 
  
   var scrfiptfd = document.createElement("script");
