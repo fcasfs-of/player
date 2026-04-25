@@ -3,9 +3,31 @@ var myVar;
 function fstringno_valtext(id,g) {   if (id == null || id === "" || id === "undefined") {     return g;    }    return id;   }
 
 
+function getFileNameFromoUrl(url) {
+    if (!url || typeof url !== 'string') return null;
+    
+    try {
+        url = url.trim();
+        const urlObj = new URL(url);
+        const pathname = urlObj.pathname;
+        
+        if (!pathname || pathname === '/') return null;
+        
+        const segments = pathname.split('/');
+        const fileName = segments[segments.length - 1];
+        
+        if (!fileName || fileName === '') return null;
+        
+        const cleanFileName = fileName.split('?')[0].split('#')[0];
+        return decodeURIComponent(cleanFileName);
+        
+    } catch (error) {        return null;    }
+}
+
+
 function F_getFileName(file) {
     const fileParam = fstringno_valtext(file, "");
-    return fileParam ? fileParam.replace(/\.[^/.]+$/, ' ') : null;
+    return getFileNameFromoUrl(fileParam);
 }
 
 
