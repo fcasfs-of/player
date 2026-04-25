@@ -244,7 +244,8 @@ itenslifffd={ id:j+1, filetl: run_file().file_title, title: run_file().list[j].t
 function initSidebar_onload(api){       if(api){
 
 api("this", "this", [
-   
+   { label: " ", desc: ' ', icon: null, onClick: null }
+
  ], " ", '', 'dark', 'right', function(api){
    
    if(api){
