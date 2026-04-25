@@ -29,7 +29,7 @@ function removeExtension(filename) {
 
 
 function F_getFileName(file) {
-    const fileParam = removeExtension(fstringno_valtext(getFileNameFromoUrl(fstringno_valtext(file, "")),""));
+    var fileParam = removeExtension(fstringno_valtext(getFileNameFromoUrl(fstringno_valtext(file, "")),""));
 if(fileParam==="watch" || fileParam==="embed"){  fileParam="";  }
     return fileParam;   }
 
