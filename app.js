@@ -257,7 +257,7 @@ itenslifffd={ id:j+1, filetl: run_file().file_title, title: run_file().list[j].t
        if (currentVideo) {  document.querySelector('.video-meta').innerHTML = ``;    }  
  
 
-function dinitSidebar_onload(api){       if(api){
+var dinitSidebar_onload = function(api){       if(api){
 
 api("this", "this", [
    { label: " ", desc: ' ', icon: null, onClick: null }
@@ -273,7 +273,7 @@ close: function(){  if(fplayeri){  fplayeri.api("play");  }  }
 });
 
 
-}   }
+}   };
 
 fcarregarTudo([
     {
