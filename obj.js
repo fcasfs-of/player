@@ -19,9 +19,17 @@ function getFileNameFromoUrl(url) {
     } catch (error) {        return null;    }
 }
 
+function removeExtension(filename) {
+            const lastDotIndex = filename.lastIndexOf('.');
+            if (lastDotIndex === -1 || lastDotIndex === 0) {
+                return filename;
+            }
+            return filename.substring(0, lastDotIndex);
+        }
+
 
 function F_getFileName(file) {
-    const fileParam = fstringno_valtext(getFileNameFromoUrl(fstringno_valtext(file, "")),"");
+    const fileParam = removeExtension(fstringno_valtext(getFileNameFromoUrl(fstringno_valtext(file, "")),""));
 if(fileParam==="watch" || fileParam==="embed"){  fileParam="";  }
     return fileParam;   }
 
