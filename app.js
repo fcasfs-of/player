@@ -1,6 +1,22 @@
 var fplayeri;
 
 
+function fcarregarTudo(listaRecursos) {   if(listaRecursos){
+    listaRecursos.forEach(item => {
+        const destinoStr = item.destino; 
+        const tag = item.tag;           
+        const atributos = item.atributos; 
+        const elementoPai = document.getElementsByTagName(destinoStr)[0];
+        if (!elementoPai) {            return;        }
+        const elemento = document.createElement(tag);
+        for (const chave in atributos) {
+            if (atributos.hasOwnProperty(chave)) {                elemento.setAttribute(chave, atributos[chave]);            }
+        }
+        elementoPai.appendChild(elemento);
+    });     }
+}
+
+
 function stringno_valtext(id,g) {   if (id == null || id === "" || id === "undefined") {     return g;    }    return id;   }
 
 
