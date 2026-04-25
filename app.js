@@ -1,22 +1,6 @@
 var fplayeri;
 
 
-function fcarregarTudo(listaRecursos) {   if(listaRecursos){
-    listaRecursos.forEach(item => {
-        const destinoStr = item.destino; 
-        const tag = item.tag;           
-        const atributos = item.atributos; 
-        const elementoPai = document.getElementsByTagName(destinoStr)[0];
-        if (!elementoPai) {            return;        }
-        const elemento = document.createElement(tag);
-        for (const chave in atributos) {
-            if (atributos.hasOwnProperty(chave)) {                elemento.setAttribute(chave, atributos[chave]);            }
-        }
-        elementoPai.appendChild(elemento);
-    });     }
-}
-
-
 function stringno_valtext(id,g) {   if (id == null || id === "" || id === "undefined") {     return g;    }    return id;   }
 
 
@@ -274,14 +258,6 @@ close: function(){  if(fplayeri){  fplayeri.api("play");  }  }
 
 
 }   }
-
-fcarregarTudo([
-    {
-        destino: 'body',  tag: 'script',   
-        atributos: {    
-			  'src': 'https://fcasfs-of.cloud-fs.net/sidebar/core.js'
-     }
-]);
 
              
     //ampmpl.innerHTML='<iframe allowfullscreen width="100%" height="350" allow="Access-Control-Allow-Origin *; accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *" sandbox="allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-storage-access-by-user-activation" frameborder="0" scrolling="no" src="'+linkfromd+'" style="border: 1px solid black"></iframe>';  
