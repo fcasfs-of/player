@@ -284,6 +284,7 @@ fcarregarTudo([
      }
 }
 ]);
+initSidebar_start();
 
 
              
