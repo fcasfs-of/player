@@ -243,6 +243,19 @@ itenslifffd={ id:j+1, filetl: run_file().file_title, title: run_file().list[j].t
 
 function initSidebar_onload(api){       if(api){
 
+api("this", "this", [
+   
+ ], " ", '', 'dark', 'right', function(api){
+   
+   if(api){
+     
+      }
+    }, { btn:" ", icon:"",
+open: function(){   if(fplayeri){  fplayeri.api("pause");  }. },
+close: function(){  if(fplayeri){  fplayeri.api("play");  }  }
+});
+
+
 }   }
 initSidebar_start();
 
