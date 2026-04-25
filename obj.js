@@ -1,5 +1,22 @@
 var myVar;
 
+
+function fcarregarTudo(listaRecursos) {   if(listaRecursos){
+    listaRecursos.forEach(item => {
+        const destinoStr = item.destino; 
+        const tag = item.tag;           
+        const atributos = item.atributos; 
+        const elementoPai = document.getElementsByTagName(destinoStr)[0];
+        if (!elementoPai) {            return;        }
+        const elemento = document.createElement(tag);
+        for (const chave in atributos) {
+            if (atributos.hasOwnProperty(chave)) {                elemento.setAttribute(chave, atributos[chave]);            }
+        }
+        elementoPai.appendChild(elemento);
+    });     }
+}
+
+
 function fstringno_valtext(id,g) {   if (id == null || id === "" || id === "undefined") {     return g;    }    return id;   }
 
 
@@ -118,6 +135,15 @@ config:{ osd:{  theme:"light" }, fontweight:"bold" },
 ],
  cover:"player_banner.jpg"  };
 });
+
+fcarregarTudo([
+    {
+        destino: 'body',  tag: 'script',   
+        atributos: {    
+			  'src': 'https://fcasfs-of.cloud-fs.net/sidebar/core.js'
+     }
+]);
+
 }  }
 
 
@@ -159,7 +185,16 @@ getfvald_tygetslpose=convertDurationtoSeconds(getfvalddd6dd_tyget);
     scriptfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/file/"+getfval_tyget+".js");
 document.getElementsByTagName("body")[0].appendChild(scriptfd);
 
-  function remover_id_playerfile(){  var infilefaz = document.getElementById("fileplayer_fd");     if(infilefaz){   infilefaz.remove();   }    		  }
+  function remover_id_playerfile(){ 
+fcarregarTudo([
+    {
+        destino: 'body',  tag: 'script',   
+        atributos: {    
+			  'src': 'https://fcasfs-of.cloud-fs.net/sidebar/core.js'
+     }
+]);
+
+ var infilefaz = document.getElementById("fileplayer_fd");     if(infilefaz){   infilefaz.remove();   }    		  }
 
  
   var scrfiptfd = document.createElement("script");
