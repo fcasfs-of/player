@@ -262,7 +262,7 @@ function initSidebar_onload(api){       if(api){
 api("this", "this", [
    { label: " ", desc: ' ', icon: null, onClick: null }
 
- ], " ", '', 'dark', 'right', function(api){
+ ], " ", '  ', 'dark', 'right', function(api){
    
    if(api){
      
