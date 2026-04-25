@@ -21,10 +21,9 @@ function getFileNameFromoUrl(url) {
 
 
 function F_getFileName(file) {
-    const fileParam = fstringno_valtext(file, "");
+    const fileParam = fstringno_valtext(getFileNameFromoUrl(fstringno_valtext(file, "")),"");
 if(fileParam=="watch" || fileParam=="embed"){  fileParam="";  }
-    return fstringno_valtext(getFileNameFromoUrl(fileParam),"");
-}
+    return fileParam;   }
 
 
 
