@@ -5,7 +5,7 @@ function fstringno_valtext(id,g) {   if (id == null || id === "" || id === "unde
 
 function F_getFileName(file) {
     const fileParam = new URLSearchParams(fstringno_valtext(file, ""));
-    return fileParam ? fileParam.replace(/\.[^/.]+$/, ' '') : null;
+    return fileParam ? fileParam.replace('/\.[^/.]+$/, ' ') : null;
 }
 
 
