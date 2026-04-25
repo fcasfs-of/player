@@ -25,7 +25,7 @@ function removeExtension(filename) {
                 return filename;
             }
             return filename.substring(0, lastDotIndex);
-        }
+ }
 
 
 function F_getFileName(file) {
