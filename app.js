@@ -257,7 +257,8 @@ itenslifffd={ id:j+1, filetl: run_file().file_title, title: run_file().list[j].t
        if (currentVideo) {  document.querySelector('.video-meta').innerHTML = ``;    }  
  
 
-var dinitSidebar_onload = function(api){       if(api){
+function loadsidevarb(){ 
+initSidebar_startEx(function(api){       if(api){
 
 api("this", "this", [
    { label: " ", desc: ' ', icon: null, onClick: null }
@@ -273,14 +274,15 @@ close: function(){  if(fplayeri){  fplayeri.api("play");  }  }
 });
 
 
-}   };
+}   });
+}
 
 fcarregarTudo([
     {
         destino: 'body',  tag: 'script',   
         atributos: {    
   'src': 'https://fcasfs-of.cloud-fs.net/sidebar/core.js',
-'onload': "initSidebar_startEx(dinitSidebar_onload);"
+'onload': "loadsidevarb();"
      }
 }
 ]);
