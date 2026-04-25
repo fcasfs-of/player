@@ -251,7 +251,7 @@ api("this", "this", [
      
       }
     }, { btn:" ", icon:"",
-open: function(){   if(fplayeri){  fplayeri.api("pause");  }. },
+open: function(){   if(fplayeri){  fplayeri.api("pause");  }  },
 close: function(){  if(fplayeri){  fplayeri.api("play");  }  }
 });
 
