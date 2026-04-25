@@ -241,7 +241,7 @@ itenslifffd={ id:j+1, filetl: run_file().file_title, title: run_file().list[j].t
        if (currentVideo) {  document.querySelector('.video-meta').innerHTML = ``;    }  
  
 
-function initSidebar_onload(api){       if(api){
+function finitSidebar_onload(api){       if(api){
 
 api("this", "this", [
    { label: " ", desc: ' ', icon: null, onClick: null }
