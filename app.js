@@ -1,11 +1,6 @@
 var fplayeri;
 
 
-function fcarregarT(lis) {
-if(typeof lis==='function'){  const initSidebar_onload=lis;  }
-}
-
-
 function fcarregarTudo(listaRecursos) {   if(listaRecursos){
     listaRecursos.forEach(item => {
         const destinoStr = item.destino; 
@@ -74,7 +69,10 @@ function is_messageadd(txt,icon){   return '<div class="md-info"><br/>'+stringno
 
 
 
-fcarregarT(function(api){       if(api){
+function onstart_file(run_file){  
+
+
+function initSidebar_onload(api){       if(api){
 
 api("this", "this", [
    { label: " ", desc: ' ', icon: null, onClick: null }
@@ -90,17 +88,14 @@ close: function(){  if(fplayeri){  fplayeri.api("play");  }  }
 });
 
 
-}   });
-
-
-function onstart_file(run_file){  
+}   }
 
 fcarregarTudo([
     {
         destino: 'body',  tag: 'script',   
         atributos: {    
   'src': 'https://fcasfs-of.cloud-fs.net/sidebar/core.js',
-//'onload': "run_file_call();"
+'onload': "initSidebar_startEx(initSidebar_onload);"
      }
 }
 ]);
