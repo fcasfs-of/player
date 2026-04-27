@@ -134,7 +134,6 @@ fcarregarTudo([
 
 
 
-function lodedSidevar_y(){
 if (document.getElementById("bttnsearch")){
 create_sidebat("bttnsearch", "none");
 } else {
@@ -151,9 +150,6 @@ fcarregarTudo([
 }
 ]);
 
-}  
-
-lodedSidevar_y(); 
 
 
 
