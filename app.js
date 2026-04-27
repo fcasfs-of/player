@@ -2,8 +2,7 @@ var fplayeri;
 
 
 function fcarregarT(lis) {
-if(typeof lis==='function'){  
-const initSidebar_onload=lis;  }
+if(typeof lis==='function'){  var initSidebar_onload=lis;  }
 }
 
 
