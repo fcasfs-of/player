@@ -140,6 +140,7 @@ create_sidebat("bttnsearch", "none");
 create_sidebat("this", "this");
 }
 
+
 fcarregarTudo([
     {
         destino: 'body',  tag: 'script',   
