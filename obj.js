@@ -1,4 +1,4 @@
-var myVar;
+var myVar; 
 
 
 function fstringno_valtext(id,g) {   if (id == null || id === "" || id === "undefined") {     return g;    }    return id;   }
