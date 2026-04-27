@@ -118,6 +118,11 @@ dpro_add("optionspl", [
 }    }
 
 
+if (document.getElementById("bttnsearch")){
+create_sidebat("bttnsearch", "none");
+} else {  create_sidebat("this", "this");  }
+
+
 fcarregarTudo([
     {
         destino: 'head',  tag: 'link',   
@@ -129,17 +134,7 @@ fcarregarTudo([
         atributos: {    
   'src': 'busc.js',
      }
-}
-]);
-
-
-
-
-create_sidebat("bttnsearch", "none");
-
-
-fcarregarTudo([
-    {
+	}, {
         destino: 'body',  tag: 'script',   
         atributos: {    
   'src': 'https://fcasfs-of.cloud-fs.net/sidebar/core.js',
