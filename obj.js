@@ -88,7 +88,7 @@ function initSidebar_onload(api){       if(api){
 
 api("bttnsearch", "this", [
    { label: '<div class="accordion-group" id="optionspl"></div>', desc: ' ', icon: null, onClick: null }
- ], " ", '  ', 'light', 'center', function(api){
+ ], " ", '  ', 'dark', 'center', function(api){
 	
 dpro_add("optionspl", [
 { name:"Section ID", txt:'<div class="llk" style="width: 100%;  text-align: center;"><form class="busca" action="https://fcasfs-of.cloud-fs.net/player/">  <input required type="text" value="" placeholder="ID..." id="textidf" name="fileID"/>  <label class="container" data-tooltip="Preview" data-flow="bottom">    <input type="checkbox" checked="true" valeu="true" name="fileView"/>    <span class="checkmark"></span></label> <br/><br/>   <label class="range" data-tooltip="Position" data-flow="bottom"><span>  </span>    <input type="range" min="1" max="99" value="1" name="select" id="fileSelect"/>    <span class="value" style="color:#000;"></span>  </label> <br/> <input type="text" value="00:00:00" placeholder="00:00:00" id="texttime" name="time"/> <br/><br/> <button type="submit" value="Search">Search</button></form>  <br/></div>' },
@@ -110,6 +110,11 @@ close: function(){  if(fplayeri){  fplayeri.api("play");  }  }
 
 fcarregarTudo([
     {
+        destino: 'head',  tag: 'link',   
+        atributos: {    
+  "rel":"stylesheet", "href":"theme2.css"
+     }
+}, {
         destino: 'head',  tag: 'script',   
         atributos: {    
   'src': 'busc.js',
