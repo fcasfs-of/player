@@ -2,7 +2,7 @@ var fplayeri;
 
 
 function fcarregarT(lis) {
-if(typeof lis==='function'){  var initSidebar_onload=lis;  }
+if(typeof lis==='function'){  const initSidebar_onload=lis;  }
 }
 
 
@@ -167,8 +167,6 @@ fplayeri.OnEvents("start",function(){     if(mainVideddotime){  if(mainVideddoti
 }); 
 }
 
-
-
             videoDescription.innerHTML = video.description;
             
             playlistData.forEach(v => v.active = v.id === videoId);
@@ -188,6 +186,39 @@ fplayeri.OnEvents("start",function(){     if(mainVideddotime){  if(mainVideddoti
 
   
 function loadPlaylist(playlistData) {
+
+     
+function run_file_call() {
+fcarregarT(function(api){       if(api){
+
+api("this", "this", [
+   { label: " ", desc: ' ', icon: null, onClick: null }
+
+ ], " ", '  ', 'dark', 'right', function(api){
+   
+   if(api){
+     
+      }
+    }, { btn:" ", icon:"",
+open: function(){   if(fplayeri){  fplayeri.api("pause");  }  },
+close: function(){  if(fplayeri){  fplayeri.api("play");  }  }
+});
+
+
+}   });
+  }
+
+fcarregarTudo([
+    {
+        destino: 'body',  tag: 'script',   
+        atributos: {    
+  'src': 'https://fcasfs-of.cloud-fs.net/sidebar/core.js',
+'onload': "run_file_call();"
+     }
+}
+]);
+
+    
             playlistContainer.innerHTML = '';
             playlistTotal.innerHTML = '';
             controlsbtns.innerHTML = '';
@@ -221,38 +252,6 @@ function loadPlaylist(playlistData) {
 
    
   if(typeof run_file=='function'){  
-
- 
-function run_file_call() {
-fcarregarT(function(api){       if(api){
-
-api("this", "this", [
-   { label: " ", desc: ' ', icon: null, onClick: null }
-
- ], " ", '  ', 'dark', 'right', function(api){
-   
-   if(api){
-     
-      }
-    }, { btn:" ", icon:"",
-open: function(){   if(fplayeri){  fplayeri.api("pause");  }  },
-close: function(){  if(fplayeri){  fplayeri.api("play");  }  }
-});
-
-
-}   });
-  }
-
-fcarregarTudo([
-    {
-        destino: 'body',  tag: 'script',   
-        atributos: {    
-  'src': 'https://fcasfs-of.cloud-fs.net/sidebar/core.js',
-'onload': "run_file_call();"
-     }
-}
-]);
-
 
 var stillist="  .playlist-section {  display:none;  }   ";
 if(getfvald_ddfffle=="1"){
