@@ -69,39 +69,7 @@ function is_messageadd(txt,icon){   return '<div class="md-info"><br/>'+stringno
 
 
 
-function onstart_file(run_file){  
-
-
-function initSidebar_onload(api){       if(api){
-
-api("this", "this", [
-   { label: " ", desc: ' ', icon: null, onClick: null }
-
- ], " ", '  ', 'dark', 'right', function(api){
-   
-   if(api){
-     
-      }
-    }, { btn:" ", icon:"",
-open: function(){   if(fplayeri){  fplayeri.api("pause");  }  },
-close: function(){  if(fplayeri){  fplayeri.api("play");  }  }
-});
-
-
-}   }
-
-fcarregarTudo([
-    {
-        destino: 'body',  tag: 'script',   
-        atributos: {    
-  'src': 'https://fcasfs-of.cloud-fs.net/sidebar/core.js',
-'onload': "initSidebar_startEx(initSidebar_onload);"
-     }
-}
-]);
-
-
-    
+function onstart_file(run_file){   
 var playlistData = [];   
            
   var acssr = document.getElementById('cutompll');   
