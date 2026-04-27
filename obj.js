@@ -147,7 +147,7 @@ create_sidebat("bttnsearch", "none");
 create_sidebat("this", "this");
 }
 initSidebar_startEx(initSidebar_onload_t);
-}  }
+}  
 
 
 
