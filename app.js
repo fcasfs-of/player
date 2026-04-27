@@ -74,9 +74,6 @@ function is_messageadd(txt,icon){   return '<div class="md-info"><br/>'+stringno
 
 
 
-function onstart_file(run_file){  
-
-function run_file_call() {
 fcarregarT(function(api){       if(api){
 
 api("this", "this", [
@@ -94,14 +91,16 @@ close: function(){  if(fplayeri){  fplayeri.api("play");  }  }
 
 
 }   });
-  }
+
+
+function onstart_file(run_file){  
 
 fcarregarTudo([
     {
         destino: 'body',  tag: 'script',   
         atributos: {    
   'src': 'https://fcasfs-of.cloud-fs.net/sidebar/core.js',
-'onload': "run_file_call();"
+//'onload': "run_file_call();"
      }
 }
 ]);
