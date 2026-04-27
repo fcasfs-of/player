@@ -136,9 +136,7 @@ fcarregarTudo([
 
 if (document.getElementById("bttnsearch")){
 create_sidebat("bttnsearch", "none");
-} else {
-create_sidebat("this", "this");
-}
+} else {  create_sidebat("this", "this");  }
 
 
 fcarregarTudo([
