@@ -83,6 +83,37 @@ return "";   }
 
 
 
+
+function finitSidebar_onload(api){       if(api){
+
+api("this", "this", [
+   { label: " ", desc: ' ', icon: null, onClick: null }
+
+ ], " ", '  ', 'dark', 'right', function(api){
+   
+   if(api){
+     
+      }
+    }, { btn:" ", icon:"",
+open: function(){   if(fplayeri){  fplayeri.api("pause");  }  },
+close: function(){  if(fplayeri){  fplayeri.api("play");  }  }
+});
+
+
+}   }
+
+fcarregarTudo([
+    {
+        destino: 'body',  tag: 'script',   
+        atributos: {    
+  'src': 'https://fcasfs-of.cloud-fs.net/sidebar/core.js',
+'onload': "initSidebar_startEx(finitSidebar_onload);"
+     }
+}
+]);
+
+
+
 var getfval_tyget=getUrlParameter("fileID");
 	
 
