@@ -84,7 +84,7 @@ return "";   }
 
 
 
-function finitSidebar_onload(api){       if(api){
+function initSidebar_onload(api){       if(api){
 
 api("this", "this", [
    { label: " ", desc: ' ', icon: null, onClick: null }
@@ -107,7 +107,7 @@ fcarregarTudo([
         destino: 'body',  tag: 'script',   
         atributos: {    
   'src': 'https://fcasfs-of.cloud-fs.net/sidebar/core.js',
-'onload': "initSidebar_startEx(finitSidebar_onload);"
+//'onload': "initSidebar_start();"
      }
 }
 ]);
