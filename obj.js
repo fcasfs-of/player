@@ -105,6 +105,10 @@ dpro_add("optionspl", [
 	
    if(api){
      api.active(0);
+
+	   api.open();
+	   if(fplayeri){  api.close();  }
+	   
       }
     }, custinBtn);
 
