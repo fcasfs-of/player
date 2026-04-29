@@ -105,7 +105,7 @@ api.acc("optionspl", [
 ]);
   progressScriptfile("#fileSelect",".value");  
 	
-     api.active(0);
+     api.active(1);
 
 	   //api.open();
 	   //if(fplayeri){  api.close();  }
