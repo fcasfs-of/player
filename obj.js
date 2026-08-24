@@ -232,3 +232,64 @@ document.getElementsByTagName("body")[0].appendChild(scrfiptfd);
 }   
 
 
+
+
+var cokk_plu_idf="pt";
+
+function exe_check_load_fl(){   
+ var cokk_plu_enfd="/en";    var cokk_plsu_enfdd="-en"; 
+ if (location.href.toUpperCase().indexOf(cokk_plu_enfd.toUpperCase()) > -1) {    cokk_plu_idf="en";    }
+ if (location.href.toUpperCase().indexOf(cokk_plsu_enfdd.toUpperCase()) > -1) {    cokk_plu_idf="en";    }
+
+
+if (typeof carregamentoGlobal === 'function'){ 	carregamentoGlobal('show', {
+    modelo: 'spinner', posicao: 'center',
+    tipo: 'classic',   // Opções: classic, ring, dash, dots, bars, pulse, custom
+    cor: '#111',  tamanho: '75px',   
+    velocidade: '0.8s', arredondamento: '20px',
+    fundoOpacity: 0.8,  
+    autoDetect: true,
+    mostrarPorcentagem: false, texto: ''
+});   }
+
+
+if (typeof criarMenuRetorno === 'function'){ 	
+ var criarMenuRetorno_on=cokk_plu_idf;
+ if(criarMenuRetorno_on=="pt"){   criarMenuRetorno_on="";   }
+ 
+criarMenuRetorno({
+    idioma: cokk_plu_idf,
+    fixo: false, novaAba: false,
+    posicao: 'top-center',
+    estaticoLarguraToda: true, alinhamento: 'center',arredondamento: '50px',
+    negrito: true,    italico: false,    sublinhado: false,
+    efeitoTransicao: true,
+    urlPrincipal: 'https://fcasfs-of.cloud-fs.net/'+criarMenuRetorno_on
+});
+}
+
+
+
+}
+
+
+function injetarScriptHome(isHead) {
+ cokk_plu_idf="en";   
+
+    var scriptHomeex = document.createElement('script');
+    scriptHomeex.src = 'https://fcasfs-of.cloud-fs.net/core_k.js';
+    scriptHomeex.onload = function() {
+        if (typeof exe_check_load_fl === 'function') {
+            exe_check_load_fl();
+        }
+    };
+    var alvo = isHead 
+        ? document.getElementsByTagName('head')[0] 
+        : document.getElementsByTagName('body')[0];
+    alvo.appendChild(scriptHomeex);
+}
+
+
+injetarScriptHome(false);
+
+
