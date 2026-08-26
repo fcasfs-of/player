@@ -297,7 +297,13 @@ const maindVideddoposte = document.getElementById('ividlistm_'+video.id);
 if(mainVideddotime){  if(mainVideddotime.innerHTML=="undefined" || mainVideddotime.innerHTML=="" || mainVideddotime.innerHTML=="Tech: Player"){  videoTitle.innerHTML=""+fplayeri.api("title");  mainVideddotime.innerHTML=""+fplayeri.api("title");  }  } 
 
 
-fplayeri.OnEvents("metadata",function(){      if(mainVideddotime){  if(mainVideddotime.innerHTML=="undefined" || mainVideddotime.innerHTML=="" || mainVideddotime.innerHTML=="Tech: Player"){  videoTitle.innerHTML=""+fplayeri.api("title");  mainVideddotime.innerHTML=""+fplayeri.api("title");  }  }  });   
+fplayeri.OnEvents("metadata",function(){   
+    if(getfvald_ddfffle=="1"){
+        controlsbtns.innerHTML = '<style>  .bkm-main-wrapper div, .bkm-main-wrapper div button { width:100%;}  </style>  '+'  <div id="meu-gerenciador-favoritos" style="display: grid;  gap: 4px;  width:100%;  margin-left:6px;margin-right:6px;"></div>  ';
+        criarDivisor({ id: 'ctbtnss', margemLateral: '6px',margemExtremidades: '8px', espacamento: '5px', itens:[{ arredondado: '10px', tipo: 'media', cor: '#fff', quantidade: 2, orientacao: 'linha' }]});
+    }
+    
+    if(mainVideddotime){  if(mainVideddotime.innerHTML=="undefined" || mainVideddotime.innerHTML=="" || mainVideddotime.innerHTML=="Tech: Player"){  videoTitle.innerHTML=""+fplayeri.api("title");  mainVideddotime.innerHTML=""+fplayeri.api("title");  }  }  });   
 
 fplayeri.OnEvents("start",function(){     if(mainVideddotime){  if(mainVideddotime.innerHTML=="undefined" || mainVideddotime.innerHTML=="" || mainVideddotime.innerHTML=="Tech: Player"){  videoTitle.innerHTML=""+fplayeri.api("title");  mainVideddotime.innerHTML=""+fplayeri.api("title");  }  }  });   
 
