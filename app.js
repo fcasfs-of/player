@@ -254,8 +254,9 @@ if (videoId >= playlistData.length) {  btenproxim='';  }
 
 
 controlsbtns.innerHTML = '<style>  .bkm-main-wrapper div, .bkm-main-wrapper div button { width:100%;}  </style>  '+'  <div id="meu-gerenciador-favoritos" style="display: grid;  gap: 4px;  width:100%;  margin-left:6px;margin-right:6px;"></div>     <div style="display: grid;  gap: 4px;  width:100%;  margin-left:6px;margin-right:6px;">  '+btenvoltr+'   '+btenproxim+'  </div> ';
-criarDivisor({ id: 'ctbtnss', margemLateral: '6px',margemExtremidades: '8px', espacamento: '5px', itens:[{ arredondado: '10px', tipo: 'media', cor: '#fff', quantidade: 2, orientacao: 'linha' },{ tipo: 'media', cor: '#fff', quantidade: 2, arredondado: '10px', orientacao: 'linha' }]});
-   
+//criarDivisor({ id: 'ctbtnss', margemLateral: '6px',margemExtremidades: '8px', espacamento: '5px', itens:[{ arredondado: '10px', tipo: 'media', cor: '#fff', quantidade: 2, orientacao: 'linha' },{ tipo: 'media', cor: '#fff', quantidade: 2, arredondado: '10px', orientacao: 'linha' }]});
+          aloda_favinid(); 
+  
         const conprevVideosbtns = document.getElementById('prevVideo');
         const conpnextVideobtns = document.getElementById('nextVideo');
         if(conprevVideosbtns){   conprevVideosbtns.addEventListener('click', prevVideo);  }
@@ -293,7 +294,7 @@ fplayeri.OnEvents("init",function(){
 
     if(getfvald_ddfffle=="1"){
         controlsbtns.innerHTML = '<style>  .bkm-main-wrapper div, .bkm-main-wrapper div button { width:100%;}  </style>  '+'  <div id="meu-gerenciador-favoritos" style="display: grid;  gap: 4px;  width:100%;  margin-left:6px;margin-right:6px;"></div>  ';
-        criarDivisor({ id: 'ctbtnss', margemLateral: '6px',margemExtremidades: '8px', espacamento: '5px', itens:[{ arredondado: '10px', tipo: 'media', cor: '#fff', quantidade: 2, orientacao: 'linha' }]});
+        //criarDivisor({ id: 'ctbtnss', margemLateral: '6px',margemExtremidades: '8px', espacamento: '5px', itens:[{ arredondado: '10px', tipo: 'media', cor: '#fff', quantidade: 2, orientacao: 'linha' }]});
          aloda_favinid(); 
     }
     
