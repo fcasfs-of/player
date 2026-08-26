@@ -11,8 +11,8 @@ function aloda_favinid() {
     targetMode: 'self',
     startMaximized: false,
     theme: 'light',
-    onOpen: function() {    },
-    onClose: function() {     },
+    onOpen: function() {  if(fplayeri){  fplayeri.api("pause");  }  },
+    onClose: function() {  if(fplayeri){  fplayeri.api("play");  }   },
     onAdd: function(item) {    },
     onRemove: function(url) {    }
 });
