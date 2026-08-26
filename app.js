@@ -1,3 +1,29 @@
+function aloda_favinid() {
+    const scriptNode = document.createElement('script');
+    scriptNode.src = 'fav.js'; 
+    scriptNode.type = 'text/javascript';    scriptNode.async = true;
+
+    scriptNode.onload = function() {
+        if (typeof initBookmarkManager === 'function') {
+ window.meuGerenciadorFavoritos = initBookmarkManager({
+    containerId: 'meu-gerenciador-favoritos',
+    lang: 'en',
+    targetMode: 'self',
+    startMaximized: false,
+    theme: 'light',
+    onOpen: function() {    },
+    onClose: function() {     },
+    onAdd: function(item) {    },
+    onRemove: function(url) {    }
+});
+        }
+    };
+
+    document.body.appendChild(scriptNode);
+}
+
+
+
 var fplayeri;
 
 const AgeGate = {
@@ -225,7 +251,7 @@ if (videoId <= 1) {  btenvoltr='';  }
 if (videoId >= playlistData.length) {  btenproxim='';  }
 
 
-controlsbtns.innerHTML = btenvoltr+'   '+btenproxim+'   ';
+controlsbtns.innerHTML = btenvoltr+'     <div id="meu-gerenciador-favoritos" style="font-size:8px; margin-left:4px;margin-right:5px;"></div>     '+btenproxim+'   ';
    
         const conprevVideosbtns = document.getElementById('prevVideo');
         const conpnextVideobtns = document.getElementById('nextVideo');
@@ -278,7 +304,9 @@ fplayeri.OnEvents("start",function(){     if(mainVideddotime){  if(mainVideddoti
             videoDescription.innerHTML = video.description;
             
             playlistData.forEach(v => v.active = v.id === videoId);
-            
+
+            aloda_favinid();
+    
             document.querySelectorAll('.playlist-item').forEach(item => {
                 if (parseInt(item.dataset.id) === videoId) {
                     item.classList.add('active');
