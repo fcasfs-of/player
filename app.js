@@ -183,7 +183,6 @@ fplayeri.OnEvents("metadata",function(){
  if(tid){    if(mainVideotime){  if(mainVideotime.innerHTML==""+convertSecondsDurationto(0) || mainVideotime.innerHTML==""){  mainVideotime.innerHTML=""+convertSecondsDurationto(Number(stringno_valtext(fplayeri.api("duration"),"0")));   }  }  }
 });
 
-fplayeri.OnEvents("init",function(){
 
     if(getfvald_ddfffle=="1"){
         controlsbtns.innerHTML = '<style>  .bkm-main-wrapper div, .bkm-main-wrapper div button { width:100%;}  </style>  '+'  <div id="meu-gerenciador-favoritos" style="display: grid;  gap: 4px;  width:100%;  margin-left:6px;margin-right:6px;"></div>  ';
@@ -191,6 +190,7 @@ fplayeri.OnEvents("init",function(){
          aloda_favinid(); 
     }
     
+fplayeri.OnEvents("init",function(){    
 fplayeri.api("unmute");
 
 fplayeri.api('seek',Number(stringno_valtext(time,"0")));
