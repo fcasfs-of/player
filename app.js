@@ -253,7 +253,7 @@ if (videoId <= 1) {  btenvoltr='';  }
 if (videoId >= playlistData.length) {  btenproxim='';  }
 
 
-controlsbtns.innerHTML = criarDivisor({margemLateral: '6px',margemExtremidades: '8px', espacamento: '5px', itens:[{ arredondado: '10px', tipo: 'media', cor: '#fff', quantidade: 2, orientacao: 'linha' },{ tipo: 'media', cor: '#fff', quantidade: 2, arredondado: '10px', orientacao: 'linha' }]})+'<br/>'+'     <div id="meu-gerenciador-favoritos" style="display: grid;  gap: 4px;  width:100%;  margin-left:6px;margin-right:6px;"></div>     <div style="display: grid;  gap: 4px;  width:100%;  margin-left:6px;margin-right:6px;">  '+btenvoltr+'   '+btenproxim+'  </div>  ';
+controlsbtns.innerHTML = '<div>  '+criarDivisor({margemLateral: '6px',margemExtremidades: '8px', espacamento: '5px', itens:[{ arredondado: '10px', tipo: 'media', cor: '#fff', quantidade: 2, orientacao: 'linha' },{ tipo: 'media', cor: '#fff', quantidade: 2, arredondado: '10px', orientacao: 'linha' }]})+'  </div>   <br/>'+'  <div>   <div id="meu-gerenciador-favoritos" style="display: grid;  gap: 4px;  width:100%;  margin-left:6px;margin-right:6px;"></div>     <div style="display: grid;  gap: 4px;  width:100%;  margin-left:6px;margin-right:6px;">  '+btenvoltr+'   '+btenproxim+'  </div>   </div>  ';
    
         const conprevVideosbtns = document.getElementById('prevVideo');
         const conpnextVideobtns = document.getElementById('nextVideo');
