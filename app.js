@@ -1,12 +1,7 @@
 function criarDivisor(config){const isLista=config&&Array.isArray(config.itens);const configs=isLista?config.itens:[config||{}];const espacamentoUniversal=(config&&config.espacamento)?config.espacamento:'20px';const margemLat=(config&&config.margemLateral)?config.margemLateral:'0px';const margemExt=(config&&config.margemExtremidades)?config.margemExtremidades:'0px';let htmlTotal='';configs.forEach(cfg=>{const{cor='#ccc',largura,altura,quantidade=1,orientacao='linha',tipo='fina',arredondado='0px',bordaTamanho='0px',bordaCor='transparent',espacamento='10px'}=cfg;let espessuraPadrao='2px';if(tipo==='media')espessuraPadrao='5px';if(tipo==='grossa'||tipo==='grosa')espessuraPadrao='10px';const isColuna=orientacao==='coluna';const dimEspessura=altura||espessuraPadrao;const dimComprimento=largura||(isColuna?'100px':'100%');let htmlContainer=`<div style="display:flex;flex-direction:${isColuna?'row':'column'};gap:${espacamento};justify-content:center;align-items:center;flex:${isLista?'1':'none'};width:${isLista?'auto':'100%'};box-sizing:border-box;pointer-events:none;user-select:none;-webkit-user-select:none;">`;for(let i=0;i<quantidade;i++){const w=isColuna?dimEspessura:dimComprimento;const h=isColuna?dimComprimento:dimEspessura;htmlContainer+=`<div style="background-color:${cor};width:${w};height:${h};max-width:100%;border:${bordaTamanho} solid ${bordaCor};border-radius:${arredondado};box-sizing:border-box;pointer-events:none;user-select:none;-webkit-user-select:none;"></div>`;}htmlContainer+='</div>';htmlTotal+=htmlContainer;});let htmlFinal=isLista?`<div style="display:flex;flex-direction:row;column-gap:${espacamentoUniversal};row-gap:0px;justify-content:center;align-items:center;width:100%;padding:${margemExt} ${margemLat};box-sizing:border-box;pointer-events:none;user-select:none;-webkit-user-select:none;">${htmlTotal}</div>`:`<div style="padding:${margemExt} ${margemLat};width:100%;box-sizing:border-box;pointer-events:none;user-select:none;-webkit-user-select:none;">${htmlTotal}</div>`;if(config&&config.id){const alvo=document.getElementById(config.id);if(alvo){alvo.insertAdjacentHTML('beforebegin',htmlFinal);}}}
 
-function aloda_favinid() {
-    const scriptNode = document.createElement('script');
-    scriptNode.src = 'fav.js'; 
-    scriptNode.type = 'text/javascript';    scriptNode.async = true;
-
-    scriptNode.onload = function() {
-        if (typeof initBookmarkManager === 'function') {
+var meuGerenciadorFavoritos_starche=false;
+function meuGerenciadorFavoritos_star(){          if (typeof initBookmarkManager === 'function') {
  window.meuGerenciadorFavoritos = initBookmarkManager({
     containerId: 'meu-gerenciador-favoritos',
     lang: 'en',
@@ -17,9 +12,14 @@ function aloda_favinid() {
     onClose: function() {  if(fplayeri){  fplayeri.api("play");  }   },
     onAdd: function(item) {    },
     onRemove: function(url) {    }
-});
-        }
-    };
+});    meuGerenciadorFavoritos_starche=true;
+}     }
+
+function aloda_favinid() {
+    const scriptNode = document.createElement('script');
+    scriptNode.src = 'fav.js'; 
+    scriptNode.type = 'text/javascript';    scriptNode.async = true;
+    scriptNode.onload = function() {   if(meuGerenciadorFavoritos_starche===false){   meuGerenciadorFavoritos_star();  }   };
 
     document.body.appendChild(scriptNode);
 }
@@ -301,6 +301,7 @@ fplayeri.OnEvents("metadata",function(){
     if(getfvald_ddfffle=="1"){
         controlsbtns.innerHTML = '<style>  .bkm-main-wrapper div, .bkm-main-wrapper div button { width:100%;}  </style>  '+'  <div id="meu-gerenciador-favoritos" style="display: grid;  gap: 4px;  width:100%;  margin-left:6px;margin-right:6px;"></div>  ';
         criarDivisor({ id: 'ctbtnss', margemLateral: '6px',margemExtremidades: '8px', espacamento: '5px', itens:[{ arredondado: '10px', tipo: 'media', cor: '#fff', quantidade: 2, orientacao: 'linha' }]});
+         if(meuGerenciadorFavoritos_starche===false){   meuGerenciadorFavoritos_star();  } 
     }
     
     if(mainVideddotime){  if(mainVideddotime.innerHTML=="undefined" || mainVideddotime.innerHTML=="" || mainVideddotime.innerHTML=="Tech: Player"){  videoTitle.innerHTML=""+fplayeri.api("title");  mainVideddotime.innerHTML=""+fplayeri.api("title");  }  }  });   
