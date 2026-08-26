@@ -2,7 +2,26 @@ function criarDivisor(config){const isLista=config&&Array.isArray(config.itens);
 
 var meuGerenciadorFavoritos_starche=false;
 
-function aloda_favinid() {    if(meuGerenciadorFavoritos_starche===false){  
+function aloda_favinid() {   
+if(meuGerenciadorFavoritos_starche===true){
+  var acsedssr = document.getElementById('meu-gerenciador-favoritos');   
+if(acsedssr){
+    if(acsedssr.innerHTML==""){
+        window.meuGerenciadorFavoritos = initBookmarkManager({
+    containerId: 'meu-gerenciador-favoritos',
+    lang: 'en',
+    targetMode: 'self',
+    startMaximized: false,
+    theme: 'light',
+    onOpen: function() {  if(fplayeri){  fplayeri.api("pause");  }  },
+    onClose: function() {  if(fplayeri){  fplayeri.api("play");  }   },
+    onAdd: function(item) {    },
+    onRemove: function(url) {    }
+});   
+}    }
+}
+                          
+    if(meuGerenciadorFavoritos_starche===false){  
     const scriptNode = document.createElement('script');
     scriptNode.src = 'fav.js'; 
     scriptNode.type = 'text/javascript';    scriptNode.async = true;
