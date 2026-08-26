@@ -183,12 +183,6 @@ fplayeri.OnEvents("metadata",function(){
  if(tid){    if(mainVideotime){  if(mainVideotime.innerHTML==""+convertSecondsDurationto(0) || mainVideotime.innerHTML==""){  mainVideotime.innerHTML=""+convertSecondsDurationto(Number(stringno_valtext(fplayeri.api("duration"),"0")));   }  }  }
 });
 
-
-    if(getfvald_ddfffle=="1"){
-        controlsbtns.innerHTML = '<style>  .bkm-main-wrapper div, .bkm-main-wrapper div button { width:100%;}  </style>  '+'  <div id="meu-gerenciador-favoritos" style="display: grid;  gap: 4px;  width:100%;  margin-left:6px;margin-right:6px;"></div>  ';
-        criarDivisor({ id: 'ctbtnss', margemLateral: '6px',margemExtremidades: '8px', espacamento: '5px', itens:[{ arredondado: '10px', tipo: 'media', cor: '#fff', quantidade: 2, orientacao: 'linha' }]});
-         aloda_favinid(); 
-    }
     
 fplayeri.OnEvents("init",function(){    
 fplayeri.api("unmute");
@@ -296,6 +290,13 @@ onstart_fplay(fplayeri, getfvald_tygetslpose, getfvald_ddfffle,video.id);  }
 
 if(video.title==""){   
 fplayeri.OnEvents("init",function(){    
+
+    if(getfvald_ddfffle=="1"){
+        controlsbtns.innerHTML = '<style>  .bkm-main-wrapper div, .bkm-main-wrapper div button { width:100%;}  </style>  '+'  <div id="meu-gerenciador-favoritos" style="display: grid;  gap: 4px;  width:100%;  margin-left:6px;margin-right:6px;"></div>  ';
+        criarDivisor({ id: 'ctbtnss', margemLateral: '6px',margemExtremidades: '8px', espacamento: '5px', itens:[{ arredondado: '10px', tipo: 'media', cor: '#fff', quantidade: 2, orientacao: 'linha' }]});
+         aloda_favinid(); 
+    }
+    
 const mainVideddotime = document.getElementById('tvidlist_'+video.id);
 const maindVideddoposte = document.getElementById('ividlistm_'+video.id);
 
