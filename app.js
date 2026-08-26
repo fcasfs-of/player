@@ -306,7 +306,12 @@ fplayeri.OnEvents("metadata",function(){
     
     if(mainVideddotime){  if(mainVideddotime.innerHTML=="undefined" || mainVideddotime.innerHTML=="" || mainVideddotime.innerHTML=="Tech: Player"){  videoTitle.innerHTML=""+fplayeri.api("title");  mainVideddotime.innerHTML=""+fplayeri.api("title");  }  }  });   
 
-fplayeri.OnEvents("start",function(){     if(mainVideddotime){  if(mainVideddotime.innerHTML=="undefined" || mainVideddotime.innerHTML=="" || mainVideddotime.innerHTML=="Tech: Player"){  videoTitle.innerHTML=""+fplayeri.api("title");  mainVideddotime.innerHTML=""+fplayeri.api("title");  }  }  });   
+fplayeri.OnEvents("start",function(){    
+    if(getfvald_ddfffle=="1"){
+     aloda_favinid();  if(meuGerenciadorFavoritos_starche===false){   meuGerenciadorFavoritos_star();  } 
+     }
+ 
+ if(mainVideddotime){  if(mainVideddotime.innerHTML=="undefined" || mainVideddotime.innerHTML=="" || mainVideddotime.innerHTML=="Tech: Player"){  videoTitle.innerHTML=""+fplayeri.api("title");  mainVideddotime.innerHTML=""+fplayeri.api("title");  }  }  });   
 
 }); 
 }
