@@ -251,7 +251,7 @@ if (videoId <= 1) {  btenvoltr='';  }
 if (videoId >= playlistData.length) {  btenproxim='';  }
 
 
-controlsbtns.innerHTML = btenvoltr+'     <div id="meu-gerenciador-favoritos" style="font-size:8px; margin-left:4px;margin-right:5px;"></div>     '+btenproxim+'   ';
+controlsbtns.innerHTML = btenvoltr+'     <div id="meu-gerenciador-favoritos" style="width:100%;  margin-left:6px;margin-right:6px;"></div>     '+btenproxim+'   ';
    
         const conprevVideosbtns = document.getElementById('prevVideo');
         const conpnextVideobtns = document.getElementById('nextVideo');
