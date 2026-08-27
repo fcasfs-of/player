@@ -249,11 +249,12 @@ var playlistData = [];
         const pfielidtile = document.getElementById('titlemfpf');
 
 
-  
+var changeVideo_idf=0;  
 function changeVideo(playlistData,videoId) {
     const video = playlistData.find(v => v.id === videoId);
        if (!video) return;
-  
+  changeVideo_idf=videoId;
+    
  if(playlistData.length>=2){
 function prevVideo() {
 let newIndex = videoId - 1;
@@ -374,7 +375,7 @@ function loadPlaylist(playlistData) {
                     </div>
                 `;
                 
-                playlistItem.addEventListener('click', () => changeVideo(playlistData,video.id));
+                playlistItem.addEventListener('click', function(){if(changeVideo_idf && changeVideo_idf>0){ location.href=substituirTexto(location.href, "&select="+changeVideo_idf, "&select="+video.id); } });
                 playlistContainer.appendChild(playlistItem);
 
                 if(video.active==true){  changeVideo(playlistData,video.id);  }
