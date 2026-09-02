@@ -1,7 +1,7 @@
 function get_parenteFCAFS(link) {
     let linkTratado = decodeURIComponent(link);
     if (linkTratado.includes("/player/?")) {
-        linkTratado = linkTratado.replace("fcasfs-of.cloud-fs.net/player/?", "player.fcasfs-of.cloud-fs.net/?");
+        linkTratado = linkTratado.replace("https://fcasfs-of.cloud-fs.net/player/?", "https://player.fcasfs-of.cloud-fs.net/?");
         linkTratado = linkTratado.replace("&select=", "&fileSelect=");
         const urlObj = new URL(linkTratado);
         const tempoString = urlObj.searchParams.get("time");
@@ -12,7 +12,7 @@ function get_parenteFCAFS(link) {
             linkTratado = urlObj.toString();
         }
     }
-return encodeURIComponent(linkTratado);  }
+return linkTratado;  }
 
 
 const bkmGlobalConfig = { storageKey: 'bkm_bookmarks', perPageKey: 'bkm_per_page', stateKey: 'bkm_is_maximized', defaultPerPage: 5, defaultLang: 'pt', availablePages: [5, 10, 20, 50] };
