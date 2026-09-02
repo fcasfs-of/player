@@ -302,6 +302,10 @@ mainVideo.innerHTML='';
 //if(fplayeri){  fplayeri.api("destroy");  }
 
 
+
+    var getfval_tygddddet=getUrlParameter("full");
+	if (getfval_tygddddet && getfval_tygddddet=="on") {     }
+	
 var configpllof = { OSD:run_file().player_osd, id:"main-video", customtext:{age:""}, config:run_file().config, nocontrols:0, autoplay:0, loop:0, title:""+video.title, file: playlistData, poster:"", player:1, "embed":`https://player.fcasfs-of.cloud-fs.net/${run_file().player_lang}?fileID=${getfval_tyget}&fileView=true&pos=${getfvald_tygetslpose}&fileSelect=${video.id}`,"url":`https://player.fcasfs-of.cloud-fs.net/${run_file().player_lang}?fileID=${getfval_tyget}&fileView=true&pos=${getfvald_tygetslpose}&fileSelect=${video.id}`, plstart:""+video.id  };
 
 if(getfvald_ddfffle=="1"){
@@ -400,9 +404,6 @@ stillist="";
     if(run_file().pg_dark==true){  
       sryrkk="<style> "+stillist+" .markdown-body blockquote #mpd, #mpd { color:#fff;  }  body, body img, .markdown-body div, .markdown-body blockquote, .markdown-body h3, .markdown-body h3 a { color:#fff; background:#111; }  .markdown-body h2 img, .markdown-body h2{   color:#fff;  background:#111;  background-color:#111;   } body img{ pointer-events:none; }  </style>";  
     }  
-
-    var getfval_tygddddet=getUrlParameter("full");
-	if (getfval_tygddddet && getfval_tygddddet=="on") {   sryrkddk=" <style>  .video-container { position: fixed !important; top: 0 !important; left: 0 !important; width: 100vw !important; height: 100vh !important; z-index: 2147483647 !important; background: #000000 !important; background-color: #000000 !important; margin: 0 !important; padding: 0 !important; overflow: hidden !important; } .video-container .iframe { position: absolute !important; top: 50% !important; left: 50% !important; -webkit-transform: translate(-50%, -50%) !important; -moz-transform: translate(-50%, -50%) !important; -ms-transform: translate(-50%, -50%) !important; -o-transform: translate(-50%, -50%) !important; transform: translate(-50%, -50%) !important; max-width: 100vw !important; max-height: 100vh !important; aspect-ratio: 16 / 9 !important; border: none !important; margin: 0 !important; display: block !important; }  </style>";  }
     
     acssr.innerHTML=sryrkk+sryrkddk;  
     document.title='Player: '+run_file().file_title+' - '+document.title;  
