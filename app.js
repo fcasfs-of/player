@@ -235,12 +235,11 @@ function is_messageadd(txt,icon){   return '<div class="md-info"><br/>'+stringno
 
 
 
+	 if (getfval_tygddddet && getfval_tygddddet=="on") {  configpllofbii="myDiv";  }
 
 function onstart_file(run_file){   
 var playlistData = [];   
-
-	 if (getfval_tygddddet && getfval_tygddddet=="on") {  configpllofbii="myDiv";  }
-
+	
   var acssr = document.getElementById('cutompll');   
   var acssr_cover = document.querySelector('.logo img');
   
