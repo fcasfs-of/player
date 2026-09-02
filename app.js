@@ -395,12 +395,16 @@ if(getfvald_ddfffle=="1"){
 stillist="";
 }
 
+    var sryrkddk="";
     var sryrkk="<style> "+stillist+" .markdown-body blockquote #mpd, #mpd { color:#000;  }   body img{ pointer-events:none; } </style>";  
     if(run_file().pg_dark==true){  
       sryrkk="<style> "+stillist+" .markdown-body blockquote #mpd, #mpd { color:#fff;  }  body, body img, .markdown-body div, .markdown-body blockquote, .markdown-body h3, .markdown-body h3 a { color:#fff; background:#111; }  .markdown-body h2 img, .markdown-body h2{   color:#fff;  background:#111;  background-color:#111;   } body img{ pointer-events:none; }  </style>";  
     }  
 
-    acssr.innerHTML=sryrkk;  
+    var getfval_tygddddet=getUrlParameter("full");
+	if (getfval_tygddddet && getfval_tygddddet=="on") {   sryrkddk=" <style>  .video-container, .video-container .iframe { position: fixed;top: 0;left: 0;width: 100%;bottom: 0;right: 0;height: 100%;z-index: 999999;  }  .video-container .iframe { z-index: 99999999; }</style>";  }
+    
+    acssr.innerHTML=sryrkk+sryrkddk;  
     document.title='Player: '+run_file().file_title+' - '+document.title;  
     videoDescription.innerHTML=run_file().file_desc;  
     pfielidtile.innerHTML='Media Player';  
