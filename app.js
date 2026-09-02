@@ -243,10 +243,10 @@ var playlistData = [];
 
 var configpllofbii ="main-video";
     var getfval_tygddddet=getUrlParameter("full");
-	if (getfval_tygddddet && getfval_tygddddet=="on") {   configpllofbii="myDiv";  }
 	
 	const mainVideo = document.getElementById(configpllofbii);
-        const mainVtha = document.getElementById('infotime');
+
+	const mainVtha = document.getElementById('infotime');
         const videoTitle = document.getElementById('video-title');
         const videoDescription = document.getElementById('video-description');
         const playlistContainer = document.getElementById('playlist');
@@ -317,7 +317,9 @@ fplayeri = fs_Playerjs(configpllof);
 if(video.filetl!="" && video.title!=""){   fplayeri.Toast("info",video.filetl,video.title);  }
 onstart_fplay(fplayeri, getfvald_tygetslpose, getfvald_ddfffle,video.id);  }
             
-            videoTitle.innerHTML = video.title;
+ if (getfval_tygddddet && getfval_tygddddet=="on") {   Object.assign(mainVideo.style, { position: 'fixed', top: '0', left: '0', width: '100vw', height: '100vh', zIndex: '2147483647', border: 'none', margin: '0', padding: '0', objectFit: 'cover', display: 'block' });   }
+
+	videoTitle.innerHTML = video.title;
 
 if(video.title==""){   
 fplayeri.OnEvents("init",function(){    
