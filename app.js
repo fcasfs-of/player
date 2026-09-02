@@ -402,7 +402,7 @@ stillist="";
     }  
 
     var getfval_tygddddet=getUrlParameter("full");
-	if (getfval_tygddddet && getfval_tygddddet=="on") {   sryrkddk=" <style>  .video-container { position: fixed !important; top: 0 !important; left: 0 !important; width: 100% !important; height: 100% !important; min-height: 100vh !important; min-height: 100dvh !important; z-index: 2147483647 !important; display: flex !important; justify-content: center !important; align-items: center !important; background-color: #000 !important; margin: 0 !important; padding: 0 !important; overflow: hidden !important; box-sizing: border-box !important; } .video-container .iframe { width: 100% !important; height: 100% !important; max-width: 100vw !important; max-height: 100vh !important; max-height: 100dvh !important; display: block !important; margin: 0 !important; padding: 0 !important; border: none !important; box-sizing: border-box !important; overflow: hidden !important; }  </style>";  }
+	if (getfval_tygddddet && getfval_tygddddet=="on") {   sryrkddk=" <style>  .video-container { position: fixed !important; top: 0 !important; left: 0 !important; width: 100vw !important; height: 100vh !important; z-index: 2147483647 !important; background: #000000 !important; background-color: #000000 !important; margin: 0 !important; padding: 0 !important; overflow: hidden !important; } .video-container .iframe { position: absolute !important; top: 50% !important; left: 50% !important; transform: translate(-50%, -50%) !important; margin: 0 !important; }  </style>";  }
     
     acssr.innerHTML=sryrkk+sryrkddk;  
     document.title='Player: '+run_file().file_title+' - '+document.title;  
