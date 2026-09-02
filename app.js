@@ -49,7 +49,7 @@ window.meuGerenciadorFavoritos = initBookmarkManager({
 
 var fplayeri;
 var configpllofbii ="main-video";
-var getfval_tygddddet=getUrlParameter("full");
+//var getfval_tygddddet=getUrlParameter("full");
 
 
 const AgeGate = {
@@ -233,9 +233,6 @@ fplayeri.OnEvents("speed",function(){       fplayeri.OSD({ duration:3e3, text: '
 
 function is_messageadd(txt,icon){   return '<div class="md-info"><br/>'+stringno_valtext(icon,"")+'<br/><p>'+stringno_valtext(txt,"")+'</p><br/><br/><br/></div>';  }
 
-
-
-	 if (getfval_tygddddet && getfval_tygddddet=="on") {  configpllofbii="myDiv";  }
 
 function onstart_file(run_file){   
 var playlistData = [];   
