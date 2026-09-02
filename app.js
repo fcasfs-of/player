@@ -48,6 +48,9 @@ window.meuGerenciadorFavoritos = initBookmarkManager({
 
 
 var fplayeri;
+var configpllofbii ="main-video";
+    var getfval_tygddddet=getUrlParameter("full");
+
 
 const AgeGate = {
     i18n: {
@@ -232,7 +235,6 @@ function is_messageadd(txt,icon){   return '<div class="md-info"><br/>'+stringno
 
 
 
-var configpllofbii ="main-video";
 
 function onstart_file(run_file){   
 var playlistData = [];   
@@ -242,8 +244,6 @@ var playlistData = [];
   
         const controlsbtns = document.getElementById('ctbtnss');
     
-    var getfval_tygddddet=getUrlParameter("full");
-	
 	const mainVideo = document.getElementById(configpllofbii);
 
 	const mainVtha = document.getElementById('infotime');
