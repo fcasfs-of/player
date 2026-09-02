@@ -12,7 +12,7 @@ function get_parenteFCAFS(link) {
             linkTratado = urlObj.toString();
         }
     }
-return linkTratado;  }
+return link;  }
 
 
 const bkmGlobalConfig = { storageKey: 'bkm_bookmarks', perPageKey: 'bkm_per_page', stateKey: 'bkm_is_maximized', defaultPerPage: 5, defaultLang: 'pt', availablePages: [5, 10, 20, 50] };
