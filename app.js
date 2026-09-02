@@ -240,7 +240,12 @@ var playlistData = [];
   
         const controlsbtns = document.getElementById('ctbtnss');
     
-        const mainVideo = document.getElementById('main-video');
+
+var configpllofbii ="main-video";
+    var getfval_tygddddet=getUrlParameter("full");
+	if (getfval_tygddddet && getfval_tygddddet=="on") {   configpllofbii="myDiv";  }
+	
+	const mainVideo = document.getElementById(configpllofbii);
         const mainVtha = document.getElementById('infotime');
         const videoTitle = document.getElementById('video-title');
         const videoDescription = document.getElementById('video-description');
@@ -301,10 +306,6 @@ mainVideo.innerHTML='';
 
 //if(fplayeri){  fplayeri.api("destroy");  }
 
-
-var configpllofbii ="main-video";
-    var getfval_tygddddet=getUrlParameter("full");
-	if (getfval_tygddddet && getfval_tygddddet=="on") {   configpllofbii="myDiv";  }
 	
 var configpllof = { OSD:run_file().player_osd, id:configpllofbii, customtext:{age:""}, config:run_file().config, nocontrols:0, autoplay:0, loop:0, title:""+video.title, file: playlistData, poster:"", player:1, "embed":`https://player.fcasfs-of.cloud-fs.net/${run_file().player_lang}?fileID=${getfval_tyget}&fileView=true&pos=${getfvald_tygetslpose}&fileSelect=${video.id}`,"url":`https://player.fcasfs-of.cloud-fs.net/${run_file().player_lang}?fileID=${getfval_tyget}&fileView=true&pos=${getfvald_tygetslpose}&fileSelect=${video.id}`, plstart:""+video.id  };
 
