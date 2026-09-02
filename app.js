@@ -402,7 +402,7 @@ stillist="";
     }  
 
     var getfval_tygddddet=getUrlParameter("full");
-	if (getfval_tygddddet && getfval_tygddddet=="on") {   sryrkddk=" <style>  .video-container { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 2147483647; display: flex; } .video-container iframe { width: 100%; height: 100%; flex: 1; border: none; margin: 0; padding: 0; }   </style>";  }
+	if (getfval_tygddddet && getfval_tygddddet=="on") {   sryrkddk=" <style>  .video-container { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 2147483647; display: flex; } .video-container .iframe { width: 100%; height: 100%; flex: 1; border: none; margin: 0; padding: 0; }   </style>";  }
     
     acssr.innerHTML=sryrkk+sryrkddk;  
     document.title='Player: '+run_file().file_title+' - '+document.title;  
