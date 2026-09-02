@@ -49,7 +49,7 @@ window.meuGerenciadorFavoritos = initBookmarkManager({
 
 var fplayeri;
 var configpllofbii ="main-video";
-    var getfval_tygddddet=getUrlParameter("full");
+var getfval_tygddddet=getUrlParameter("full");
 
 
 const AgeGate = {
@@ -238,7 +238,9 @@ function is_messageadd(txt,icon){   return '<div class="md-info"><br/>'+stringno
 
 function onstart_file(run_file){   
 var playlistData = [];   
-           
+
+	 if (getfval_tygddddet && getfval_tygddddet=="on") {  configpllofbii="myDiv";  }
+
   var acssr = document.getElementById('cutompll');   
   var acssr_cover = document.querySelector('.logo img');
   
@@ -317,8 +319,6 @@ fplayeri = fs_Playerjs(configpllof);
 if(video.filetl!="" && video.title!=""){   fplayeri.Toast("info",video.filetl,video.title);  }
 onstart_fplay(fplayeri, getfvald_tygetslpose, getfvald_ddfffle,video.id);  }
             
- if (getfval_tygddddet && getfval_tygddddet=="on") {   Object.assign(mainVideo.style, { position: 'fixed', top: '0', left: '0', width: '100vw', height: '100vh', zIndex: '2147483647', border: 'none', margin: '0', padding: '0', objectFit: 'cover', display: 'block' });   }
-
 	videoTitle.innerHTML = video.title;
 
 if(video.title==""){   
