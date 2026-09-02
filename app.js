@@ -402,7 +402,7 @@ stillist="";
     }  
 
     var getfval_tygddddet=getUrlParameter("full");
-	if (getfval_tygddddet && getfval_tygddddet=="on") {   sryrkddk=" <style>  .video-container { position: fixed !important; top: 0 !important; left: 0 !important; width: 100vw !important; height: 100vh !important; z-index: 2147483647 !important; display: flex !important; margin: 0 !important; padding: 0 !important; } .video-container .iframe { width: 100% !important; height: 100% !important; display: flex !important; margin: 0 !important; padding: 0 !important; } .video-container .iframe #main-video { width: 100% !important; height: 100% !important; min-height: 100vh !important; flex: 1 !important; border: none !important; margin: 0 !important; padding: 0 !important; display: block !important; object-fit: fill !important; }   </style>";  }
+	if (getfval_tygddddet && getfval_tygddddet=="on") {   sryrkddk=" <style>  .video-container { position: fixed !important; top: 0 !important; left: 0 !important; width: 100vw !important; height: 100vh !important; z-index: 2147483647 !important; display: flex !important; margin: 0 !important; padding: 0 !important; overflow: hidden !important; } .video-container .iframe { width: 100% !important; height: 100% !important; display: flex !important; margin: 0 !important; padding: 0 !important; overflow: hidden !important; } .video-container .iframe #main-video { width: 100vw !important; height: 100vh !important; max-width: 100vw !important; max-height: 100vh !important; margin: 0 !important; padding: 0 !important; display: block !important; object-fit: contain !important; }   </style>";  }
     
     acssr.innerHTML=sryrkk+sryrkddk;  
     document.title='Player: '+run_file().file_title+' - '+document.title;  
