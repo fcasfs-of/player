@@ -402,7 +402,7 @@ stillist="";
     }  
 
     var getfval_tygddddet=getUrlParameter("full");
-	if (getfval_tygddddet && getfval_tygddddet=="on") {   sryrkddk=" <style>  .video-container { position: fixed !important; top: 0 !important; left: 0 !important; width: 100vw !important; height: 100vh !important; z-index: 2147483647 !important; background: #000000 !important; background-color: #000000 !important; margin: 0 !important; padding: 0 !important; overflow: hidden !important; } .video-container .iframe { position: absolute !important; top: 50% !important; left: 50% !important; transform: translate(-50%, -50%) !important; margin: 0 !important; }  </style>";  }
+	if (getfval_tygddddet && getfval_tygddddet=="on") {   sryrkddk=" <style>  .iframe { position: fixed !important; top: 50% !important; left: 50% !important; transform: translate(-50%, -50%) !important; width: 100vw !important; height: 100vh !important; z-index: 2147483647 !important; background: #000000 !important; background-color: #000000 !important; border: none !important; margin: 0 !important; padding: 0 !important; overflow: hidden !important; }  </style>";  }
     
     acssr.innerHTML=sryrkk+sryrkddk;  
     document.title='Player: '+run_file().file_title+' - '+document.title;  
