@@ -232,6 +232,8 @@ function is_messageadd(txt,icon){   return '<div class="md-info"><br/>'+stringno
 
 
 
+var configpllofbii ="main-video";
+
 function onstart_file(run_file){   
 var playlistData = [];   
            
@@ -240,8 +242,6 @@ var playlistData = [];
   
         const controlsbtns = document.getElementById('ctbtnss');
     
-
-var configpllofbii ="main-video";
     var getfval_tygddddet=getUrlParameter("full");
 	
 	const mainVideo = document.getElementById(configpllofbii);
